@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Prettau-Dental/static/css/main.8909b68f.css",
-    "main.js": "/Prettau-Dental/static/js/main.27cb41e0.js",
+    "main.css": "/Prettau-Dental/static/css/main.bcdde80c.css",
+    "main.js": "/Prettau-Dental/static/js/main.b6b1d586.js",
     "static/js/787.d4aba7ab.chunk.js": "/Prettau-Dental/static/js/787.d4aba7ab.chunk.js",
     "static/media/main-slide.jpg": "/Prettau-Dental/static/media/main-slide.86c3b1e8bc2a9661690d.jpg",
     "static/media/fa-solid-900.svg": "/Prettau-Dental/static/media/fa-solid-900.ca408b63c26d83dbd1e4.svg",
@@ -25,7 +25,6 @@
     "static/media/icomoon.ttf?orkqwr": "/Prettau-Dental/static/media/icomoon.b0adc82afa3ff191927b.ttf",
     "static/media/about-one-img-2.jpg": "/Prettau-Dental/static/media/about-one-img-2.dfc5826cf8ea051a86ef.jpg",
     "static/media/cta-four-bg.png": "/Prettau-Dental/static/media/cta-four-bg.56935deea3c26186e9fd.png",
-    "static/media/page-header-bg.jpg": "/Prettau-Dental/static/media/page-header-bg.7cf8f06de92f1998c36a.jpg",
     "static/media/fa-regular-400.eot": "/Prettau-Dental/static/media/fa-regular-400.08f9891a6f44d9546678.eot",
     "static/media/fa-regular-400.ttf": "/Prettau-Dental/static/media/fa-regular-400.1495f578452eb676f730.ttf",
     "static/media/counter-one-bg.png": "/Prettau-Dental/static/media/counter-one-bg.dac20fc7af5ee1190315.png",
@@ -37,12 +36,12 @@
     "static/media/news-1-1.jpg": "/Prettau-Dental/static/media/news-1-1.c52a845ab09dcfbd6967.jpg",
     "static/media/about-one-shape-1.png": "/Prettau-Dental/static/media/about-one-shape-1.616a97bab726628514f6.png",
     "index.html": "/Prettau-Dental/index.html",
-    "main.8909b68f.css.map": "/Prettau-Dental/static/css/main.8909b68f.css.map",
-    "main.27cb41e0.js.map": "/Prettau-Dental/static/js/main.27cb41e0.js.map",
+    "main.bcdde80c.css.map": "/Prettau-Dental/static/css/main.bcdde80c.css.map",
+    "main.b6b1d586.js.map": "/Prettau-Dental/static/js/main.b6b1d586.js.map",
     "787.d4aba7ab.chunk.js.map": "/Prettau-Dental/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8909b68f.css",
-    "static/js/main.27cb41e0.js"
+    "static/css/main.bcdde80c.css",
+    "static/js/main.b6b1d586.js"
   ]
 }
