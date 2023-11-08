@@ -85,6 +85,10 @@ background-color: #f3920e2b !important;
     border-bottom: 0px;
 }
 
+.team-one__name{
+  font-size: 1rem !important;
+}
+
 /* .ar .owl-carousel,
 .ar .bx-wrapper { direction: ltr; }
 .ar .owl-carousel .owl-item { direction: rtl; } */
@@ -203,12 +207,15 @@ left: 0px !important;
 
 .ar .team-two__right{
   display: block;
-  margin-left: -300px !important;
+  margin-left: -530px !important;
   margin-right: 0px !important;
+}
+.owl-dots {
+  display: none;
 }
 .ar .team-two__left .section__title-two{
   text-align: right!important;
-}
+} 
 
 
 .ar .icon-down-arrow{
@@ -468,7 +475,9 @@ left: 0px !important;
 }
 
 
-
+.ar .owl-carousel.owl-loaded{
+  direction: ltr;
+}
 
 /* Mobile ar */
 

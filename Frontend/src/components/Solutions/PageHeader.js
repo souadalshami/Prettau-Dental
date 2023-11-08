@@ -1,6 +1,6 @@
 
 import { Link, useParams } from 'react-router-dom'
-import background   from '../../assets/images/backgrounds/page-header-bg.jpg'
+// import background   from '../../assets/images/backgrounds/page-header-bg.jpg'
 import page_header_shape_1   from '../../assets/images/shapes/page-header-shape-1.png'
 import page_header_shape_2   from '../../assets/images/shapes/page-header-shape-2.png'
 import page_header_shape_3   from '../../assets/images/shapes/page-header-shape-3.png'
@@ -37,7 +37,7 @@ function PageHeader({languageId}){
 
     return(
         <section className="page-header">
-            <div className="page-header__bg" style={{ backgroundImage: `url(${background})` }}>
+            <div className="page-header__bg">
             </div>
             <div className="page-header__shape-1 float-bob-y">
                 <img src={page_header_shape_1} alt=""/>
@@ -53,19 +53,12 @@ function PageHeader({languageId}){
             </div>
             <div className="container">
                 <div className="page-header__inner">
-                {solutions.slice(0,1).map((solutions) => {
-                      return (
-                        <h2>{solutions.name}</h2>
-                    );
-                })}
+                    <h2>{t('solutions')}</h2>
                     <ul className="thm-breadcrumb list-unstyled">
                         <li><Link to="/">{t('home')}</Link></li>
                         <li><span className="icon-down-arrow"></span></li>
-                        {solutions.slice(0,1).map((solutions) => {
-                            return (
-                                <li>{solutions.name}</li>
-                            );
-                        })}
+                        <li>{t('solutions')}</li>
+                           
                     </ul>
                 </div>
             </div>

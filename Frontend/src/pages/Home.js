@@ -17,7 +17,7 @@ import gold_logo from '../assets/images/logo/gold.png';
 
 
 function Home(){
-
+    const phoneNumber = "+964 770 037 2464";
     const [toggle, setToggle] = useState(false)
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [color,setColor] = useState(false);
@@ -56,6 +56,7 @@ function Home(){
         // Set the initial language in the state
         setLanguageId(initialLanguageId);
         languageLink.innerHTML = initialLanguageId === '1' ? 'EN' : 'AR';
+        fetchData(initialLanguageId);
 
       }, []);
   
@@ -94,7 +95,7 @@ function Home(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`${t('home')} || Prettau Dental Lab`);
+      useDocumentTitle(`Home || Prettau Dental Lab`);
 
 
     return(
@@ -204,7 +205,7 @@ function Home(){
                                         <div className="main-menu__call-content">
                                             <p className="main-menu__call-sub-title"> {t('need_help')} </p>
                                             <h5 className="main-menu__call-number">
-                                                <a href="tel:+9647700372464"> +964 770 037 2464 </a>
+                                                <a href="tel:+9647700372464"> <bdi>{phoneNumber}</bdi></a>
                                             </h5>
                                         </div>
                                     </div>
@@ -269,7 +270,7 @@ function Home(){
                     </li>
                     <li>
                         <i className="fa fa-phone-alt"></i>
-                        <a href="tel:+9647700372464">+964 770 037 2464</a>
+                        <a href="tel:+9647700372464"> <bdi>{phoneNumber}</bdi></a>
                     </li>
                 </ul>
                 <div className="mobile-nav__top">

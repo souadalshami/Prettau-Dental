@@ -12,7 +12,7 @@ import { API_ROOT } from '../../config';
 
     
 const options = {
-    // "loop": true,
+    "loop": true,
     "autoplay": true,
     "margin": 30,
     "nav": true,

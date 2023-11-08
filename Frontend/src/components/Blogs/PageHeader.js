@@ -5,20 +5,21 @@ import page_header_shape_2 from '../../assets/images/shapes/page-header-shape-2.
 import page_header_shape_3 from '../../assets/images/shapes/page-header-shape-3.png'
 import page_header_shape_4 from '../../assets/images/shapes/page-header-shape-4.png'
 import { useEffect, useState } from 'react'
+import { t } from "i18next";
 
 function PageHeader(){
-    const {id} = useParams();
-    const [item,setItem]=useState([]);
+    // const {id} = useParams();
+    // const [item,setItem]=useState([]);
 
-    useEffect(()=>{
-        fetch(`http://localhost/Prettau-Dental-lab/Backend/api_blog_category.php/?category_id=${id}`)
-        .then(res=>res.json())
-        .then(
-            (result)=>{
-            setItem(result)
-            }
-        )
-    },[]);
+    // useEffect(()=>{
+    //     fetch(`http://localhost/Prettau-Dental/Backend/get_blogs.php/?category_id=${id}`)
+    //     .then(res=>res.json())
+    //     .then(
+    //         (result)=>{
+    //         setItem(result)
+    //         }
+    //     )
+    // },[]);
 
     return(
         <section class="page-header">
@@ -38,27 +39,25 @@ function PageHeader(){
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    {item.slice(0,1).map((item) => {
-                        return (
-                            <h2>{item.title}</h2>
-                        );
-                    })}
+   
+                            <h2>{t('blogs')}</h2>
+                       
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/">{t('home')}</Link></li>
                         <li><span class="icon-down-arrow"></span></li>
                        
-                            {item.slice(0,1).map((item) => {
+                            {/* {item.slice(0,1).map((item) => {
                             return (
-                                <li><Link reloadDocument to={`/CategoriesBlog/${id}`}> {item.category_name}</Link> </li>
+                                <li>{t('Blogs')} </li>
                             );
-                        })}
+                        })} */}
                            
-                        <li><span class="icon-down-arrow"></span></li>
-                        {item.slice(0,1).map((item) => {
-                        return (
-                            <li>{item.title}</li>
-                        );
-                    })}
+                        {/* <li><span class="icon-down-arrow"></span></li> */}
+                        {/* {item.slice(0,1).map((item) => {
+                        return ( */}
+                            <li>{t('blogs')}</li>
+                        {/* );
+                    })} */}
                     </ul>
                 </div>
             </div>
