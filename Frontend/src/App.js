@@ -38,7 +38,7 @@ function App() {
   ) : (
     <>
       <div className="page-wrapper">
-        <Router basename='/Prettau-Dental-lab'>
+        <Router basename='/Prettau-Dental'>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
