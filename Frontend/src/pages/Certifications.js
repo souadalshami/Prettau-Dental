@@ -89,7 +89,7 @@ function Certifications(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`${t('events')} || Prettau Dental Lab`);
+      useDocumentTitle(`Certifications || Prettau Dental Lab`);
     return(
         <div>
             <header className="main-header">
