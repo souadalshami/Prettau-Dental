@@ -13,6 +13,7 @@ import { API_ROOT } from '../../config';
 
 
 function Footer({ languageId }){
+    const phoneNumber = "+964 770 037 2464";
 
     const { id } = useParams();
     const [solution, setSolution] = useState([]);
@@ -80,9 +81,12 @@ function Footer({ languageId }){
                                 </div> 
                                 <p className="footer-widget__about-text"><Trans i18nKey="footer-description"></Trans></p>
                                 <div className="site-footer__social">
-                                    <a href="#"><i className="fab fa-facebook"></i></a>
-                                    <a href="#"><i className="fab fa-youtube"></i></a>
-                                    <a href="#"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" target="_blank"><i className="fab fa-facebook"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" target="_blank"><i className="fab fa-youtube"></i></a>
+                                    <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
+                                    <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
+                                    <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +139,7 @@ function Footer({ languageId }){
                                         </div>
                                         <div className="content">
                                             <h3>{t('footer-questions-number')}</h3>
-                                            <p><a href="tel:+9647702464">+964 (770) 037-2464</a></p>
+                                            <p><a href="tel:+9647702464"><bdi>{phoneNumber}</bdi></a></p>
                                         </div>
                                     </li>
                                     <li>
