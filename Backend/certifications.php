@@ -38,6 +38,21 @@ if (isset($_SESSION['Username'])) {
                         $path = "uploads/certifications/" . $language['name'] . "/" . basename($image['name']);
                         $title = $_POST['title_' . $lang_id];
 
+                        $allowed = array("image/jpeg", "image/gif", "image/png", "image/webp", "image/svg+xml");
+                        
+                        if (!in_array($image['type'], $allowed)) {
+                            $_SESSION['error_message'] = 'Only JPEG, GIF, PNG, WebP, and SVG files are allowed.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
+                        // Check if name and image fields are empty
+                        if (empty($image) || empty($title) ) {
+                            $_SESSION['error_message'] = 'All fields are required.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
                         move_uploaded_file($image['tmp_name'], $path);
 
                         $stmt = $con->prepare("INSERT INTO certifications_lang (lang_id,certification_id,image, path ,title) VALUES (?, ?, ?, ?, ?)");
@@ -77,7 +92,12 @@ if (isset($_SESSION['Username'])) {
                                 echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>'; 
                                 unset($_SESSION['success_message']);
                             } ?>
-                  
+                            
+                            <?php if (isset($_SESSION['error_message'])) { 
+                                echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>'; 
+                                unset($_SESSION['error_message']);
+                            } ?>
+
                             <div class="col-lg-12 col-md-12">
                                 <div class="mt-3">
                                     <!-- Modal -->
@@ -99,13 +119,13 @@ if (isset($_SESSION['Username'])) {
                                                             <div class="row">
                                                                 <div class="col mb-3">
                                                                     <label for="name" class="form-label">Name</label>
-                                                                    <input type="text" name="title_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" />
+                                                                    <input type="text" name="title_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" required/>
                                                                 </div>
                                                             </div>
                                                             <div class="row g-2">
                                                                 <div class="col mb-0">
                                                                     <label for="image" class="form-label">Image</label>
-                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control"/>
+                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control"  required/>
                                                                 </div>
                                                             </div>
                                                         </div>

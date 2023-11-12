@@ -18,6 +18,17 @@ if (isset($_SESSION['Username'])) {
             if (isset($_POST['delete_solution'])) {
                 $solutionId = $_POST['delete_solution'];
 
+                // Check if the solution is connected to a category
+                $stmt = $con->prepare("SELECT * FROM categories_lang WHERE solution_id = ?");
+                $stmt->execute([$solutionId]);
+                $solution = $stmt->fetch();
+
+                if ($solution) {
+                    $_SESSION['error_message'] = 'The solution is connected to a category and cannot be deleted.';
+                    header('Location: ' . $_SERVER['PHP_SELF']);
+                    exit();
+                }
+
                 // Delete the row from the solutions_lang table
                 $stmt = $con->prepare("DELETE FROM solutions_lang WHERE solution_id = ?");
                 $stmt->execute([$solutionId]);
@@ -37,6 +48,12 @@ if (isset($_SESSION['Username'])) {
                     $name = $_POST['name_' . $lang_id];
                     $description = $_POST['description_' . $lang_id];
 
+                    // Check if name and description fields are empty
+                    if (empty($name) || empty($description)) {
+                        $_SESSION['error_message'] = 'All fields are required.';
+                        header('Location: ' . $_SERVER['PHP_SELF']);
+                        exit();
+                    }
 
                     $stmt = $con->prepare("INSERT INTO solutions_lang (lang_id,solution_id,name,description) VALUES (?, ?, ?, ?)");
                     $stmt->execute([$lang_id, $lastInsertId, $name,$description]);
@@ -48,7 +65,6 @@ if (isset($_SESSION['Username'])) {
         } catch (PDOException $e) {
             echo "Error inserting data: " . $e->getMessage();
         }
-
     }
 
 
@@ -75,6 +91,11 @@ if (isset($_SESSION['Username'])) {
                                 echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>'; 
                                 unset($_SESSION['success_message']);
                             } ?>
+
+                            <?php if (isset($_SESSION['error_message'])) { 
+                                echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>'; 
+                                unset($_SESSION['error_message']);
+                            } ?>
                   
                             <div class="col-lg-12 col-md-12">
                                 <div class="mt-3">
@@ -97,13 +118,13 @@ if (isset($_SESSION['Username'])) {
                                                             <div class="row">
                                                                 <div class="col mb-3">
                                                                     <label for="name" class="form-label">Name</label>
-                                                                    <input type="text" name="name_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" />
+                                                                    <input type="text" name="name_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" required />
                                                                 </div>
                                                             </div>
                                                             <div class="row">
                                                                 <div class="col mb-3">
                                                                     <label for="name" class="form-label">Description</label>
-                                                                    <input type="text" name="description_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" />
+                                                                    <input type="text" name="description_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Description" required />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -177,7 +198,7 @@ if (isset($_SESSION['Username'])) {
  
 }
 else{
-     header("Location: index.php");
+     header("Location: login.php");
      exit();
 }
  ?>

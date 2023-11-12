@@ -30,6 +30,17 @@ if (isset($_SESSION['Username'])) {
                 if (isset($_POST['delete_categories'])) {
                     $categoriesId = $_POST['delete_categories'];
 
+                    // Check if the category is connected to a blog
+                    $stmt = $con->prepare("SELECT * FROM blogs_lang WHERE category_id = ?");
+                    $stmt->execute([$categoriesId]);
+                    $category = $stmt->fetch();
+
+                    if ($category) {
+                        $_SESSION['error_message'] = 'The Category is connected to a blog and cannot be deleted.';
+                        header('Location: ' . $_SERVER['PHP_SELF']);
+                        exit();
+                    }
+
                     // Delete the row from the categories_lang table
                     $stmt = $con->prepare("DELETE FROM categories_lang WHERE category_id = ?");
                     $stmt->execute([$categoriesId]);
@@ -50,6 +61,21 @@ if (isset($_SESSION['Username'])) {
                         $description = $_POST['description_' . $lang_id];
                         $image = $_FILES['image_' . $lang_id];
                         $path = "uploads/categories/" . $language['name'] . "/" . basename($image['name']);
+
+                        $allowed = array("image/jpeg", "image/gif", "image/png", "image/webp", "image/svg+xml");
+                        
+                        if (!in_array($image['type'], $allowed)) {
+                            $_SESSION['error_message'] = 'Only JPEG, GIF, PNG, WebP, and SVG files are allowed.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
+                        // Check if name and description fields are empty
+                        if (empty($name) || empty($description)  || empty($image)  ) {
+                            $_SESSION['error_message'] = 'All fields are required.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
             
                         move_uploaded_file($image['tmp_name'], $path);
             
@@ -93,7 +119,11 @@ if (isset($_SESSION['Username'])) {
                                 echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>'; 
                                 unset($_SESSION['success_message']);
                             } ?>
-                  
+
+                             <?php if (isset($_SESSION['error_message'])) { 
+                                echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>'; 
+                                unset($_SESSION['error_message']);
+                            } ?>
                             <div class="col-lg-12 col-md-12">
                                 <div class="mt-3">
                                     <!-- Modal -->
