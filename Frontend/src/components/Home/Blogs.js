@@ -1,6 +1,6 @@
-import news_one_shape_1 from '../../assets/images/shapes/news-one-shape-1.png'
-import news_one_shape_2 from '../../assets/images/shapes/news-one-shape-2.png'
-import news_one_shape_3 from '../../assets/images/shapes/news-one-shape-3.png'
+import news_one_shape_1 from '../../assets/images/shapes/news-one-shape-1.webp'
+import news_one_shape_2 from '../../assets/images/shapes/news-one-shape-2.webp'
+import news_one_shape_3 from '../../assets/images/shapes/news-one-shape-3.webp'
 import news_1_1 from '../../assets/images/blog/news-1-1.jpg';
 import { Link ,useParams} from 'react-router-dom';
 import { useEffect, useState } from 'react';

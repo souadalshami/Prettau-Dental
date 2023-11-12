@@ -1,7 +1,7 @@
 
-import  site_footer_two_shape_1  from '../../assets/images/shapes/site-footer-two-shape-1.png'
-import site_footer_two_shape_2 from '../../assets/images/shapes/site-footer-two-shape-2.png'
-import logo from '../../assets/images/logo/white.png'
+import  site_footer_two_shape_1  from '../../assets/images/shapes/site-footer-two-shape-1.webp'
+import site_footer_two_shape_2 from '../../assets/images/shapes/site-footer-two-shape-2.webp'
+import logo from '../../assets/images/logo/white.webp'
 import { Link ,useParams} from 'react-router-dom';
 import WOW from 'wowjs';
 import { useEffect, useState } from 'react';

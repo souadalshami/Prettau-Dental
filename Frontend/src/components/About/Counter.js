@@ -1,5 +1,5 @@
 
-import background from '../../assets/images/backgrounds/counter-one-bg.png'
+import background from '../../assets/images/backgrounds/counter-one-bg.webp'
 import CountUp from "react-countup";
 import { t } from "i18next";
 

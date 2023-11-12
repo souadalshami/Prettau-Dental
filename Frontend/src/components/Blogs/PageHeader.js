@@ -1,9 +1,9 @@
 
 import { Link, useParams } from 'react-router-dom'
-import page_header_shape_1 from '../../assets/images/shapes/page-header-shape-1.png'
-import page_header_shape_2 from '../../assets/images/shapes/page-header-shape-2.png'
-import page_header_shape_3 from '../../assets/images/shapes/page-header-shape-3.png'
-import page_header_shape_4 from '../../assets/images/shapes/page-header-shape-4.png'
+import page_header_shape_1 from '../../assets/images/shapes/page-header-shape-1.webp'
+import page_header_shape_2 from '../../assets/images/shapes/page-header-shape-2.webp'
+import page_header_shape_3 from '../../assets/images/shapes/page-header-shape-3.webp'
+import page_header_shape_4 from '../../assets/images/shapes/page-header-shape-4.webp'
 import { useEffect, useState } from 'react'
 import { t } from "i18next";
 

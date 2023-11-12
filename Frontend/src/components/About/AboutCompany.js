@@ -1,9 +1,9 @@
 
-import about_two_shape_2 from '../../assets/images/shapes/about-two-shape-2.png'
-import about_two_shape_3 from '../../assets/images/shapes/about-two-shape-3.png'
-import about_two_img_1 from '../../assets/images/resources/about-two-img-1.jpg'
-import about_two_img_2 from '../../assets/images/resources/about-two-img-2.jpg'
-import about_two_img_3 from '../../assets/images/resources/about-two-img-3.jpg'
+import about_two_shape_2 from '../../assets/images/shapes/about-two-shape-2.webp'
+import about_two_shape_3 from '../../assets/images/shapes/about-two-shape-3.webp'
+import about_two_img_1 from '../../assets/images/resources/about-two-img-1.webp'
+import about_two_img_2 from '../../assets/images/resources/about-two-img-2.webp'
+import about_two_img_3 from '../../assets/images/resources/about-two-img-3.webp'
 import CountUp from "react-countup";
 import Fancybox from "../Fancybox"; 
 import WOW from 'wowjs';

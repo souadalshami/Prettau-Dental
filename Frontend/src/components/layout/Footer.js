@@ -1,8 +1,8 @@
 
 
-import site_footer_shape_1   from '../../assets/images/shapes/site-footer-shape-1.png'
-import site_footer_shape_2   from '../../assets/images/shapes/site-footer-shape-2.png'
-import footer_logo from  '../../assets/images/logo/black.png'
+import site_footer_shape_1   from '../../assets/images/shapes/site-footer-shape-1.webp'
+import site_footer_shape_2   from '../../assets/images/shapes/site-footer-shape-2.webp'
+import footer_logo from  '../../assets/images/logo/black.webp'
 import { Link,useParams } from 'react-router-dom';
 
 import WOW from 'wowjs';

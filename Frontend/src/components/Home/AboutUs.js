@@ -4,12 +4,12 @@ import i18n from 'i18next';
 import WOW from 'wowjs';
 import { useEffect } from 'react'
 
-import about_shape1 from '../../assets/images/shapes/about-one-shape-1.png'
-import about_shape2 from '../../assets/images/shapes/about-one-shape-2.png'
-import about_shape3 from '../../assets/images/shapes/about-one-shape-3.png'
-import about_shape4 from '../../assets/images/shapes/about-one-shape-4.png'
-import about_one from '../../assets/images/resources/about-one-img-1.jpg'
-import about_two from '../../assets/images/resources/about-one-img-2.jpg'
+import about_shape1 from '../../assets/images/shapes/about-one-shape-1.webp'
+import about_shape2 from '../../assets/images/shapes/about-one-shape-2.webp'
+import about_shape3 from '../../assets/images/shapes/about-one-shape-3.webp'
+import about_shape4 from '../../assets/images/shapes/about-one-shape-4.webp'
+import about_one from '../../assets/images/resources/about-one-img-1.webp'
+import about_two from '../../assets/images/resources/about-one-img-2.webp'
 
 
 

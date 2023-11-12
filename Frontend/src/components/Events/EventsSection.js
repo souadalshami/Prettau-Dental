@@ -2,8 +2,8 @@
 
 import Fancybox from "../Fancybox.js"; 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import shapeone from "../../assets/images/shapes/portfolio-one-shape-1.png"
-import shapetwo from "../../assets/images/shapes/portfolio-one-shape-2.png"
+import shapeone from "../../assets/images/shapes/portfolio-one-shape-1.webp"
+import shapetwo from "../../assets/images/shapes/portfolio-one-shape-2.webp"
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
 import { API_IMAGE_ROOT } from '../../config';
@@ -82,34 +82,34 @@ function EventsSection({ languageId }){
             </div>
             <div className="container">
                 <div className="wow fadeInUp" data-wow-delay="100ms">
-                    {
-                        events.length === 0 ? (
-                            <div> <h2 className="text-center"> No Events Found </h2> </div>
-                        ) : (
-                        <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
-                            {events.map((events) => {
-                                return(
-                                    <SwiperSlide>
-                                        <div className="portfolio-one__single">
-                                            <div className="portfolio-one__img-box">
-                                                <div className="portfolio-one__img">
-                                                    <img  src={`${API_IMAGE_ROOT}${events.path}`} alt="" />
-                                                </div>
-                                                <div className="portfolio-one__content">
-                                                    <p className="portfolio-one__sub-title">{events.title}</p>
-                                                </div>
-                                                <div className="portfolio-one__arrow">
-                                                    <Fancybox>
-                                                        <a key={events.name}  data-fancybox="gallery" href={`${API_IMAGE_ROOT}${events.path}`} className="img-popup" ><span className="icon-top-right-1"></span></a>
-                                                    </Fancybox>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
-                    )}
+                  {
+                    events.length === 0 ? (
+                      <div> <h2 className="text-center"> No Events Found </h2> </div>
+                    ) : (
+                    <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
+                      {events.map((events) => {
+                        return(
+                          <SwiperSlide>
+                            <div className="portfolio-one__single">
+                              <div className="portfolio-one__img-box">
+                                <div className="portfolio-one__img">
+                                  <img  src={`${API_IMAGE_ROOT}${events.path}`} alt={events.name} />
+                                </div>
+                                <div className="portfolio-one__content">
+                                  <p className="portfolio-one__sub-title">{events.title}</p>
+                                </div>
+                                <div className="portfolio-one__arrow">
+                                  <Fancybox>
+                                    <a key={events.name}  data-fancybox="gallery" href={`${API_IMAGE_ROOT}${events.path}`} className="img-popup" ><span className="icon-top-right-1"></span></a>
+                                  </Fancybox>
+                                </div>
+                              </div>
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })}
+                    </Swiper>
+                  )}
                 </div>
             </div>
         </section>
