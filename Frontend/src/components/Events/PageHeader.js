@@ -1,4 +1,4 @@
-import background from "../../assets/images/backgrounds/page-header-bg.jpg";
+// import background from "../../assets/images/backgrounds/page-header-bg.jpg";
 import page_header_shape_1 from "../../assets/images/shapes/page-header-shape-1.png";
 import page_header_shape_2 from "../../assets/images/shapes/page-header-shape-2.png";
 import page_header_shape_3 from "../../assets/images/shapes/page-header-shape-3.png";
@@ -11,7 +11,6 @@ function PageHeader() {
     <section className="page-header">
       <div
         className="page-header__bg"
-        style={{ backgroundImage: `url(${background})` }}
       ></div>
       <div className="page-header__shape-1 float-bob-y">
         <img src={page_header_shape_1} alt="" />

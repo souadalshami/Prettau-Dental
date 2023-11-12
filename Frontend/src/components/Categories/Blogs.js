@@ -93,7 +93,7 @@ function Blogs({languageId}){
                             </div>
                         </div>
 
-                        <div className="sidebar sidebar--two">
+                        {/* <div className="sidebar sidebar--two">
                             <div className="sidebar__single sidebar__category">
                                 <div className="sidebar__title-box">
                                     <h3 className="sidebar__title">{t('categories')}</h3>
@@ -106,7 +106,7 @@ function Blogs({languageId}){
                                     })}
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="col-xl-8 col-lg-7">

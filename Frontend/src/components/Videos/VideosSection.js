@@ -54,6 +54,9 @@ const options = {
         fetchVideos();
       }, [languageId]);
 
+      useEffect(() => {
+        fetchVideos();
+      }, []);
 
 
 return ( 
@@ -71,9 +74,9 @@ return (
                                     </a>                            
                                 </Fancybox>
                                 <div className="team-one__content">
-                                    <h3 className="team-one__name">
+                                    <h6 className="team-one__name">
                                         <a href={videos.video_path} target="_blank">{videos.title}</a>
-                                    </h3>
+                                    </h6>
                                 </div>
                             </div>
                         </div>

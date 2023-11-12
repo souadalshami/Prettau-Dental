@@ -11,6 +11,7 @@ import PageHeader from '../components/Videos/PageHeader';
 import VideosSection from '../components/Videos/VideosSection';
 
 function Videos(){
+    const phoneNumber = "+964 770 037 2464";
     const [toggle, setToggle] = useState(false)
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [color,setColor] = useState(false);
@@ -49,6 +50,7 @@ function Videos(){
         // Set the initial language in the state
         setLanguageId(initialLanguageId);
         languageLink.innerHTML = initialLanguageId === '1' ? 'EN' : 'AR';
+        fetchData(initialLanguageId);
 
       }, []);
   
@@ -87,7 +89,7 @@ function Videos(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`${t('videos')} || Prettau Dental Lab`);
+      useDocumentTitle(` Videos || Prettau Dental Lab`);
     return(
         <div>
             <header className="main-header">
@@ -127,7 +129,10 @@ function Videos(){
                                 <div className="main-header__social">
                                     <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" target="_blank"><i className="fab fa-youtube"></i></a>
                                     <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" target="_blank"><i className="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/prettau_dental_lab/?fbclid=IwAR21GZnx1SyeCBB14au0or9daS772BiSPfdqHsNPun8sCEiqqu_U9G54wwg" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
+                                    <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
+                                    <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +200,7 @@ function Videos(){
                                         <div className="main-menu__call-content">
                                             <p className="main-menu__call-sub-title"> {t('need_help')} </p>
                                             <h5 className="main-menu__call-number">
-                                                <a href="tel:+9647700372464"> +964 770 037 2464 </a>
+                                                <a href="tel:+9647700372464">  <bdi>{phoneNumber}</bdi></a>
                                             </h5>
                                         </div>
                                     </div>
@@ -260,14 +265,17 @@ function Videos(){
                         </li>
                         <li>
                             <i className="fa fa-phone-alt"></i>
-                            <a href="tel:+9647700372464">+964 770 037 2464</a>
+                            <a href="tel:+9647700372464">  <bdi>{phoneNumber}</bdi></a>
                         </li>
                     </ul>
                     <div className="mobile-nav__top">
                         <div className="mobile-nav__social">
-                            <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" className="fab fa-facebook-square"></a>
-                            <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" className="fab fa-youtube"></a>
-                            <a href="https://www.instagram.com/prettau_dental_lab/?fbclid=IwAR21GZnx1SyeCBB14au0or9daS772BiSPfdqHsNPun8sCEiqqu_U9G54wwg" className="fab fa-instagram"></a>
+                            <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" target="_blank"><i className="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" target="_blank"><i className="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
+                            <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
+                            <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
+                            <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
                         </div>
                     </div>
                 </div>

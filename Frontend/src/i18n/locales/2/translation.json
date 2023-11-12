@@ -71,16 +71,16 @@
  "contact-form-type-here": "اكتب هنا ....",
  "contact-form-email-example": "example@example.com",
  "about-Process-one-title":"تحديد المشاكل",
- "about-Process-two-title":"ابحث عن مشكلتك",
- "about-Process-three-title":"حل المشكلتك",
- "about-Process-four-title":"التشاور مع الخبراء",
- "about-Process-one-description":"نص عربي عشوائي <br/> فقط للعرض <br/>والمشاهدة",
- "about-Process-two-description":"نص عربي عشوائي <br/> فقط للعرض <br/>والمشاهدة",
- "about-Process-three-description":"نص عربي عشوائي <br/> فقط للعرض <br/>والمشاهدة",
- "about-Process-four-description":"نص عربي عشوائي <br/> فقط للعرض <br/>والمشاهدة",
+ "about-Process-two-title":"تشخيص أمراض الأسنان",
+ "about-Process-three-title":"التخطيط  للعلاج",
+ "about-Process-four-title":"الترميم النهائي",
+ "about-Process-one-description":"يبدأ المختبر بالتشاور الأولي مع المريض",
+ "about-Process-two-description":"يستخدم علاج الأسنان في مرحلته التحضيرية والتشخيصية أنواعًا مختلفة من المعدات",
+ "about-Process-three-description":"يعتمد على البيانات الرقمية بما في ذلك انطباعات أسنان المريض لصياغة خطة العلاج",
+ "about-Process-four-description":"عملية الترميم هي عملية مباشرة حيث تأخذ في الاعتبار البيانات الرقمية وانطباعات أسنان المريض ",
  "about-testimonial-name":"جاكوب جونز",
  "about-testimonial-name-description":"شهادة الامتثال", 
- "about-testimonial-description":"أنا راض حقا عن ذلك. أنا على ما يرام. إنه يوفر لي الوقت والجهد حقًا. لوريم إيبسوم هو ببساطة نص وهمي لصناعة الطباعة والتنضيد.",
+ "about-testimonial-description":"أفضل تجربة على الإطلاق. حقا خرج بابتسامة. لقد أثبتوا لي أن عيادة الأسنان يمكن أن تكون مكانًا محبوبًا. جميع العاملين محترفون ويعتنون بالمريض بعناية فائقة ولطف. أنا أقدرهم بشدة",
  "footer-description":"تقدم الحلول المتكاملة لجميع طب الأسنان <br/>الأطراف الاصطناعية بالتوازي مع ارتفاع <br/>التكنولوجيا في جميع أنحاء العالم",
  "footer-products":"منتجات",
  "footer-latest-blog":"احدث المقالات",
@@ -95,8 +95,8 @@
  "footer-Copyright":" حقوق الطبع والنشر لبريتاو © 2023. جميع الحقوق محفوظة.",
  "send-message" :"ارسل رسالة",
  "categories" :"الفئات",
- "blogs":"المقالات"
-
-
+ "blogs":"المقالات",
+ "about-testimonial-description2":"أنا سعيد جدًا بمختبر بريتاو لطب الأسنان. لديهم مكتب لطيف للغاية ومختص ومحترف. سأوصي بكل سرور لهم لأي شخص.",
+ "about-testimonial-description3":"بيئة مريحة للغاية و احترافية. واثق جدًا من مهارات الموظفين ومسرور بالنتائج النهائية"
 
 }

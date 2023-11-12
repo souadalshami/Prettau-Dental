@@ -7,7 +7,7 @@ import { t } from "i18next";
 import { Trans } from 'react-i18next';
 
 const options = {
-    "loop": true,
+    // "loop": true,
     "autoplay": true,
     "margin": 30,
     "nav": true,
@@ -39,25 +39,61 @@ function Testimonial(){
                 <div className="testimonial-two__bottom">
                     <OwlCarousel classNameName="testimonial-two__carousel owl-carousel owl-theme thm-owl__carousel " {...options}>
                         <div className="hight">
-                         <div className="testimonial-two__single">
-                          <div className="testimonial-two__client-img">
-                                
-                                <img src={testimonial_1} alt=""/>
-                            </div>
-                            <div className="testimonial-two__client-info">
-                                <h3>{t('about-testimonial-name')}</h3>
-                                <p>{t('about-testimonial-name-description')}</p>
-                            </div>
-                            <p className="testimonial-two__text">{t('about-testimonial-description')}</p>
-                            <div className="testimonial-two__ratting">
-                                <span className="icon-star-1"></span>
-                                <span className="icon-star-1"></span>
-                                <span className="icon-star-1"></span>
-                                <span className="icon-star-1"></span>
-                                <span className="icon-star-1"></span>
+                            <div className="testimonial-two__single">
+                                <div className="testimonial-two__client-img">
+                                    {/* <img src={testimonial_1} alt=""/> */}
+                                </div>
+                                <div className="testimonial-two__client-info">
+                                    <h3>Ahmad</h3>
+                                    {/* <p>{t('about-testimonial-name-description')}</p>/ */}
+                                </div>
+                                <p className="testimonial-two__text">{t('about-testimonial-description')}</p>
+                                <div className="testimonial-two__ratting">
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div className="hight">
+                            <div className="testimonial-two__single">
+                                <div className="testimonial-two__client-img">
+                                    {/* <img src={testimonial_1} alt=""/> */}
+                                </div>
+                                <div className="testimonial-two__client-info">
+                                    <h3>Anna</h3>
+                                    {/* <p>{t('about-testimonial-name-description')}</p>/ */}
+                                </div>
+                                <p className="testimonial-two__text">{t('about-testimonial-description2')}</p>
+                                <div className="testimonial-two__ratting">
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hight">
+                            <div className="testimonial-two__single">
+                                <div className="testimonial-two__client-img">
+                                    {/* <img src={testimonial_1} alt=""/> */}
+                                </div>
+                                <div className="testimonial-two__client-info">
+                                    <h3>John</h3>
+                                    {/* <p>{t('about-testimonial-name-description')}</p>/ */}
+                                </div>
+                                <p className="testimonial-two__text">{t('about-testimonial-description3')}</p>
+                                <div className="testimonial-two__ratting">
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                    <span className="icon-star-1"></span>
+                                </div>
+                            </div>
+                        </div>
                     </OwlCarousel>
                 </div>
             </div>

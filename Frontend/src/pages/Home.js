@@ -17,8 +17,9 @@ import gold_logo from '../assets/images/logo/gold.png';
 
 
 function Home(){
-
+    const phoneNumber = "+964 770 037 2464";
     const [toggle, setToggle] = useState(false)
+    const [togglelanguage, setToggleLanguage] = useState(false)
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [color,setColor] = useState(false);
     const { t, i18n } = useTranslation();
@@ -56,6 +57,7 @@ function Home(){
         // Set the initial language in the state
         setLanguageId(initialLanguageId);
         languageLink.innerHTML = initialLanguageId === '1' ? 'EN' : 'AR';
+        fetchData(initialLanguageId);
 
       }, []);
   
@@ -94,7 +96,7 @@ function Home(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`${t('home')} || Prettau Dental Lab`);
+      useDocumentTitle(`Home || Prettau Dental Lab`);
 
 
     return(
@@ -136,7 +138,10 @@ function Home(){
                                 <div className="main-header__social">
                                     <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" target="_blank"><i className="fab fa-youtube"></i></a>
                                     <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" target="_blank"><i className="fab fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/prettau_dental_lab/?fbclid=IwAR21GZnx1SyeCBB14au0or9daS772BiSPfdqHsNPun8sCEiqqu_U9G54wwg" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
+                                    <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
+                                    <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
+                                    <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +209,7 @@ function Home(){
                                         <div className="main-menu__call-content">
                                             <p className="main-menu__call-sub-title"> {t('need_help')} </p>
                                             <h5 className="main-menu__call-number">
-                                                <a href="tel:+9647700372464"> +964 770 037 2464 </a>
+                                                <a href="tel:+9647700372464"> <bdi>{phoneNumber}</bdi></a>
                                             </h5>
                                         </div>
                                     </div>
@@ -223,7 +228,7 @@ function Home(){
             <div className="mobile-nav__content">
                 <span className="mobile-nav__close mobile-nav__toggler"  onClick={() => setNavbarOpen(false)}><i className="fa fa-times"></i></span>
                 <div className="logo-box">
-                    <a href="index.html" aria-label="logo image"><img src={gold_logo} alt="" /></a>
+                    <Link to="/" aria-label="logo image"><img src={gold_logo} alt="" /></Link>
                 </div>
                 <div className="mobile-nav__container">
                     <ul className="main-menu__list">
@@ -258,7 +263,27 @@ function Home(){
                         </li>    
                         <li className="dropdown current megamenu">
                             <Link to="/contact">{t('contact')}  </Link>
-                        </li>    
+                        </li>
+                        <div className="language">
+                    <ul className="main-menu__list">
+                        <li className="dropdown current megamenu" >
+                            <a href="#" id="language-link"> EN
+                                <button aria-label="dropdown toggler" className={`${togglelanguage ? 'expanded' : ''}`}  onClick={() => setToggleLanguage(!togglelanguage)}><i className="fa fa-angle-down"></i></button>
+                            </a>
+                            {togglelanguage && (
+                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                    <li>
+                                        <button className="mobile-language-btn" onClick={handleLanguageChange} value='1'>English</button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button className="mobile-language-btn"  onClick={handleLanguageChange} value='2'>Arabic</button>
+                                    </li>
+                                </ul>
+                            )}
+                        </li> 
+                    </ul>
+                </div>    
                     </ul>
                 </div>
 
@@ -269,14 +294,17 @@ function Home(){
                     </li>
                     <li>
                         <i className="fa fa-phone-alt"></i>
-                        <a href="tel:+9647700372464">+964 770 037 2464</a>
+                        <a href="tel:+9647700372464"> <bdi>{phoneNumber}</bdi></a>
                     </li>
                 </ul>
                 <div className="mobile-nav__top">
                     <div className="mobile-nav__social">
-                        <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" className="fab fa-facebook-square"></a>
-                        <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" className="fab fa-youtube"></a>
-                        <a href="https://www.instagram.com/prettau_dental_lab/?fbclid=IwAR21GZnx1SyeCBB14au0or9daS772BiSPfdqHsNPun8sCEiqqu_U9G54wwg" className="fab fa-instagram"></a>
+                        <a href="https://www.youtube.com/channel/UCfTmPFfWHlAIOwnlLMa7igw" target="_blank"><i className="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/Prettau-Lumineer-127597173974796/" target="_blank"><i className="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
+                        <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
+                        <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
+                        <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
                     </div>
                 </div>
             </div>
