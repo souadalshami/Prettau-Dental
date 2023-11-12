@@ -40,6 +40,21 @@ if (isset($_SESSION['Username'])) {
                         $title = $_POST['title_' . $lang_id];
                         $video_path = $_POST['video_path_' . $lang_id];
 
+                        $allowed = array("image/jpeg", "image/gif", "image/png", "image/webp", "image/svg+xml");
+                        
+                        if (!in_array($image['type'], $allowed)) {
+                            $_SESSION['error_message'] = 'Only JPEG, GIF, PNG, WebP, and SVG files are allowed.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
+                        // Check if name and image fields are empty
+                        if (empty($image) || empty($title) | empty($video_path) ) {
+                            $_SESSION['error_message'] = 'All fields are required.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
                         move_uploaded_file($image['tmp_name'], $path);
 
                         $stmt = $con->prepare("INSERT INTO videos_lang (lang_id,video_id,image, path ,title,video_path) VALUES (?, ?, ?, ?, ?,?)");
@@ -79,6 +94,11 @@ if (isset($_SESSION['Username'])) {
                                 echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>'; 
                                 unset($_SESSION['success_message']);
                             } ?>
+
+                            <?php if (isset($_SESSION['error_message'])) { 
+                                echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>'; 
+                                unset($_SESSION['error_message']);
+                            } ?>
                   
                             <div class="col-lg-12 col-md-12">
                                 <div class="mt-3">
@@ -101,19 +121,19 @@ if (isset($_SESSION['Username'])) {
                                                             <div class="row">
                                                                 <div class="col mb-3">
                                                                     <label for="name" class="form-label">Name</label>
-                                                                    <input type="text" name="title_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" />
+                                                                    <input type="text" name="title_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Name" required/>
                                                                 </div>
                                                             </div>
                                                             <div class="row g-2 mb-3">
                                                                 <div class="col mb-0">
                                                                     <label for="image" class="form-label">Image</label>
-                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control"/>
+                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control" required/>
                                                                 </div>
                                                             </div>
                                                             <div class="row g-2">
                                                                 <div class="col mb-0">
                                                                     <label for="vedio_path" class="form-label">Video Path</label>
-                                                                    <input type="text" name="video_path_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Path"/>
+                                                                    <input type="text" name="video_path_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Path" required/>
                                                                 </div>
                                                             </div>
                                                         </div>

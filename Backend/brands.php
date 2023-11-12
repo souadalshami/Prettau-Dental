@@ -38,6 +38,21 @@ if (isset($_SESSION['Username'])) {
                         $path = "uploads/brands/" . $language['name'] . "/" . basename($image['name']);
                         $brand_path = $_POST['brand_path_' . $lang_id];
 
+                        $allowed = array("image/jpeg", "image/gif", "image/png", "image/webp", "image/svg+xml");
+                        
+                        if (!in_array($image['type'], $allowed)) {
+                            $_SESSION['error_message'] = 'Only JPEG, GIF, PNG, WebP, and SVG files are allowed.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
+                        // Check if path and image fields are empty
+                        if (empty($image) || empty($brand_path) ) {
+                            $_SESSION['error_message'] = 'All fields are required.';
+                            header('Location: ' . $_SERVER['PHP_SELF']);
+                            exit();
+                        }
+
                         move_uploaded_file($image['tmp_name'], $path);
 
                         $stmt = $con->prepare("INSERT INTO brands_lang (lang_id,brand_id,image, path ,brand_path) VALUES (?, ?, ?, ?, ?)");
@@ -77,7 +92,12 @@ if (isset($_SESSION['Username'])) {
                                 echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>'; 
                                 unset($_SESSION['success_message']);
                             } ?>
-                  
+                            
+                            <?php if (isset($_SESSION['error_message'])) { 
+                                echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>'; 
+                                unset($_SESSION['error_message']);
+                            } ?>
+
                             <div class="col-lg-12 col-md-12">
                                 <div class="mt-3">
                                     <!-- Modal -->
@@ -98,13 +118,13 @@ if (isset($_SESSION['Username'])) {
                                                             <div class="row g-2 mb-3">
                                                                 <div class="col mb-0">
                                                                     <label for="image" class="form-label">Image</label>
-                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control"/>
+                                                                    <input type="file" name="image_<?php echo $language['id']; ?>" class="form-control" required/>
                                                                 </div>
                                                             </div>
                                                             <div class="row g-2">
                                                                 <div class="col mb-0">
                                                                     <label for="brand_path" class="form-label">Brand Path</label>
-                                                                    <input type="text" name="brand_path_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Path"/>
+                                                                    <input type="text" name="brand_path_<?php echo $language['id']; ?>" class="form-control" placeholder="Enter Path" required/>
                                                                 </div>
                                                             </div>
                                                         </div>
