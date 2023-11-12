@@ -75,7 +75,7 @@ function ContactForm(){
                     </div>
                     <div className="col-xl-6 col-lg-6">
                         <div className="contact-page__right">
-                            <iframe  className="google-map__one" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1622.4876796413816!2d45.40250327116394!3d35.579000000000015!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40002de8db802959%3A0xd9c77cf60ef7fb66!2sPrettau%20denal%20center!5e0!3m2!1sen!2str!4v1695753447299!5m2!1sen!2str"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe  className="google-map__one" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3244.9431744484964!2d45.45351447578311!3d35.57979437262031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzXCsDM0JzQ3LjMiTiA0NcKwMjcnMjEuOSJF!5e0!3m2!1sen!2snl!4v1699554384738!5m2!1sen!2snl" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import { useState ,useEffect} from "react";
 import { Link, Route, useParams } from 'react-router-dom';
 import { API_ROOT } from '../../config';
 import { t } from "i18next";
+import { API_IMAGE_ROOT } from '../../config';
 
 
 function Blogs({languageId}){
@@ -118,7 +119,7 @@ function Blogs({languageId}){
                                         <div className="news-one__single">
                                             <div className="news-one__img-box">
                                                 <div className="news-one__img">
-                                                    <img src={`http://localhost/Prettau-Dental/Backend/${blogs.path}`} alt=""/>
+                                                    <img src={`${API_IMAGE_ROOT}${blogs.path}`} alt=""/>
                                                 </div>
                                             </div>
                                             <div className="news-one__content">

@@ -1,92 +1,98 @@
 import Fancybox from "../Fancybox.js"; 
- import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import Dubai from '../../assets/images/team/Dubai.jpg';
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { API_ROOT } from '../../config';
-
-const options = {
-    // "loop": false,
-    "autoplay": true,
-    "margin": 30,
-    "nav": true,
-    "dots": true,
-    "smartSpeed": 500,
-    "autoplayTimeout": 10000,
-    "navText": ["<span className=\"icon-right-arrow\"></span>","<span className=\"icon-right-arrow1\"></span>"],
-    "responsive": {
-        "0": {
-            "items": 1
-        },
-        "768": {
-            "items": 2
-        },
-        "992": {
-            "items": 3
-        },
-        "1200": {
-            "items": 3
-        }
-    }
-}
+import { API_IMAGE_ROOT } from '../../config';
+import 'swiper/css';
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
 
- function VideosSection({ languageId }) { 
+function VideosSection({ languageId }) { 
 
-    const [videos, setVideos] = useState([]);
-    const [loading, setLoading] = useState(false);
+  const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(false);
     
-    const fetchVideos = async () => {
-      try {
-        setLoading(true);
-        const apiUrl = `${API_ROOT}/get_videos.php?languageId=${languageId}`;
-        const response = await fetch(apiUrl);
-        const jsonData = await response.json();
-        setVideos(jsonData);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
-    };
-    useEffect(() => {
-        fetchVideos();
-      }, [languageId]);
-
-      useEffect(() => {
-        fetchVideos();
-      }, []);
+  const fetchVideos = async () => {
+    try {
+      setLoading(true);
+      const apiUrl = `${API_ROOT}/get_videos.php?languageId=${languageId}`;
+      const response = await fetch(apiUrl);
+      const jsonData = await response.json();
+      setVideos(jsonData);
+      setLoading(false);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchVideos();
+  }, [languageId]);
 
 
-return ( 
+  const options = {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination:{ clickable: true },
+    Navigation:true,
+    speed: 700,
+    loop: true,
+    autoplay: {
+      delay: 6000,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  };
+  return ( 
     <section className="team-carousel-page">
-        <div className="container">
-        {(
-            <OwlCarousel className="team-carousel thm-owl__carousel owl-theme owl-carousel carousel-dot-style" {...options}>
-                 {videos.map((videos) => {
-                    return (
-                        <div className="item">
-                            <div className="team-one__single">
-                                <Fancybox>
-                                    <a key={videos.title} data-fancybox href={videos.path} >
-                                        <img  className="card-img-top img-fluid" src={`http://localhost/Prettau-Dental/Backend/${videos.path}`}alt=""/>
-                                    </a>                            
-                                </Fancybox>
-                                <div className="team-one__content">
-                                    <h6 className="team-one__name">
-                                        <a href={videos.video_path} target="_blank">{videos.title}</a>
-                                    </h6>
-                                </div>
-                            </div>
+      <div className="container">
+        {videos.length === 0 ? (
+          <div> <h2 className="text-center"> No videos found </h2></div>
+        ) : (
+        <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
+          {videos.map((videos) => {
+            return (
+              <SwiperSlide>
+                <div className="item">
+                  <div className="team-one__single">
+                    <Fancybox>
+                      <a key={videos.title} data-fancybox href={videos.video_path} >
+                        <div class="team-one__img">
+                          <img  className="card-img-top img-fluid" src={`${API_IMAGE_ROOT}${videos.path}`}alt=""/>
                         </div>
-                    );
-                })}
-            </OwlCarousel>
+                      </a>                            
+                    </Fancybox>
+                    <div className="team-one__content">
+                      <h6 className="team-one__name">
+                        <a href={videos.video_path} target="_blank">{videos.title}</a>
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
         )}
-        </div>
+      </div>
     </section>
-
-); 
+  ); 
 }
 export default VideosSection;

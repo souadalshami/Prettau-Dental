@@ -7,6 +7,7 @@ import { useState ,useEffect} from 'react';
 import PageHeader from '../components/Solutions/PageHeader';
 import PageFooter from '../components/layout/PageFooter'
 import Categories from '../components/Solutions/Categories';
+import { API_ROOT } from '../config';
 
 
 
@@ -78,7 +79,7 @@ function Solutions(){
       const fetchData = async () => {
         try {
           setLoading(true);
-          const apiUrl = `http://localhost/Prettau-Dental/Backend/api/get_solutions.php?languageId=${languageId}`;
+          const apiUrl = `${API_ROOT}/get_solutions.php?languageId=${languageId}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
           setSolutions(jsonData);

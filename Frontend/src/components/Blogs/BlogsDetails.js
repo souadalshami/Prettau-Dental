@@ -3,6 +3,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_ROOT } from '../../config';
+import { API_IMAGE_ROOT } from '../../config';
 import { t } from 'i18next';
 
 
@@ -74,9 +75,9 @@ function BlogDetails({languageId}){
                             <>
                                 <div className="services-details__img">
                                     <div  style={ {width:"100%" }}>
-                                        <ReactCompareSlider
-                                            itemOne={<ReactCompareSliderImage src={`http://localhost/Prettau-Dental/Backend/${blogs.path}`} srcSet={`http://localhost/Prettau-Dental/Backend/${blogs.path}`} leftlaba alt="Image one" />} 
-                                            itemTwo={<ReactCompareSliderImage src={`http://localhost/Prettau-Dental/Backend/${blogs.path2}`} srcSet={`http://localhost/Prettau-Dental/Backend/${blogs.path2}`} alt="Image two" />}
+                                        <ReactCompareSlider dir="ltr"
+                                            itemOne={<ReactCompareSliderImage src={`${API_IMAGE_ROOT}${blogs.path}`} srcSet={`${API_IMAGE_ROOT}${blogs.path}`} leftlaba alt="Image one" />} 
+                                            itemTwo={<ReactCompareSliderImage src={`${API_IMAGE_ROOT}${blogs.path2}`} srcSet={`${API_IMAGE_ROOT}${blogs.path2}`} alt="Image two" />}
                                         />
                                     </div> 
                                 </div>

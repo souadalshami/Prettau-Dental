@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { t } from "i18next";
 import { Trans } from 'react-i18next';
 import { API_ROOT } from '../../config';
+import { API_IMAGE_ROOT } from '../../config';
 
 function Blogs({ languageId }){
     
@@ -64,7 +65,7 @@ function Blogs({ languageId }){
                             <div className="news-one__single">
                                 <div className="news-one__img-box">
                                     <div className="news-one__img">
-                                        <img src={`http://localhost/Prettau-Dental/Backend/${blog.path}`} alt=""/>
+                                        <img src={`${API_IMAGE_ROOT}${blog.path}`} alt=""/>
                                     </div>
                                 </div>
                                 <div className="news-one__content">

@@ -18,7 +18,7 @@ function Counter(){
                             <div className="counter-one__count count-box">
                                 <h3 className="count-text" data-stop="10" data-speed="1500">
                                  <CountUp
-                                    end={9}
+                                    end={23}
                                     duration={9}
                                     enableScrollSpy
                                     scrollSpyOnce
@@ -51,7 +51,7 @@ function Counter(){
                             <div className="counter-one__count count-box">
                                 <h3 className="count-text" data-stop="789" data-speed="1500">
                                 <CountUp
-                                    end={40}
+                                    end={100}
                                     duration={11}
                                     enableScrollSpy
                                     scrollSpyOnce
@@ -72,7 +72,7 @@ function Counter(){
                             <div className="counter-one__count count-box">
                                 <h3 className="count-text" data-stop="650" data-speed="1500">
                                     <CountUp
-                                        end={30}
+                                        end={100}
                                         duration={10}
                                         enableScrollSpy
                                         scrollSpyOnce

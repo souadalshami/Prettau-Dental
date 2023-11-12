@@ -10,6 +10,7 @@ import Solutions from '../components/Home/Solutions';
 import Contact from '../components/Home/Contact';
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
+import { API_ROOT } from '../config';
 
 import gold_logo from '../assets/images/logo/gold.png';
 
@@ -86,7 +87,7 @@ function Home(){
       const fetchData = async () => {
         try {
           setLoading(true);
-          const apiUrl = `http://localhost/Prettau-Dental/Backend/api/get_solutions.php?languageId=${languageId}`;
+          const apiUrl = `${API_ROOT}/get_solutions.php?languageId=${languageId}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
           setSolutions(jsonData);
