@@ -10,6 +10,7 @@ import Counter from "../components/About/Counter";
 import Testimonial from "../components/About/Testimonial";
 import PageFooter from "../components/layout/PageFooter";
 import Brand from "../components/About/Brand";
+import { API_ROOT } from '../config';
 
 
 
@@ -81,7 +82,7 @@ function About(){
       const fetchData = async () => {
         try {
           setLoading(true);
-          const apiUrl = `http://localhost/Prettau-Dental/Backend/api/get_solutions.php?languageId=${languageId}`;
+          const apiUrl = `${API_ROOT}/get_solutions.php?languageId=${languageId}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
           setSolutions(jsonData);

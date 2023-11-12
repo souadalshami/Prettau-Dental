@@ -1,17 +1,16 @@
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css"
-import team_2_1 from '../../assets/images/team/team-2-1.jpg';
 import Fancybox from "../Fancybox"; 
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
+import { API_IMAGE_ROOT } from '../../config';
 import { Trans } from 'react-i18next';
-
 import { t } from "i18next";
 
 const options = {
     // "loop": true,
-    "autoplay": true,
+    // "autoplay": true,
     "margin": 30,
     "nav": true,
     "dots": false,
@@ -68,17 +67,17 @@ function CertificationsSection({ languageId }){
                     </div>
                     <div className="col-xl-8">
                         <div className="team-two__right">
-                            {(
+                           
                                 <OwlCarousel className="team-two__carousel owl-carousel owl-theme thm-owl__carousel" {...options}>
                                     {certifications.map((certifications) => {
                                      return (
                                         <div className="item">
                                             <div className="team-two__single">                  
                                                 <Fancybox>
-                                                    <a  key={certifications.name} data-fancybox href={`http://localhost/Prettau-Dental/Backend/${certifications.path}`} className="img-popup" >
+                                                    <a  key={certifications.name} data-fancybox href={`${API_IMAGE_ROOT}/${certifications.path}`} className="img-popup" >
                                                         <div className="team-two__img-box">
                                                             <div className="team-two__img">
-                                                                <img src={`http://localhost/Prettau-Dental/Backend/${certifications.path}`}alt=""/>
+                                                                <img src={`${API_IMAGE_ROOT}${certifications.path}`}alt=""/>
                                                             </div>
                                                         </div>
                                                     </a>
@@ -94,7 +93,7 @@ function CertificationsSection({ languageId }){
                                     );      
                                     })}
                                 </OwlCarousel>
-                            )}
+                            
                         </div>
                     </div>
                 </div>
