@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import { t } from "i18next";
+
 
 
 function VideosSection({ languageId }) { 
@@ -64,7 +66,7 @@ function VideosSection({ languageId }) {
     <section className="team-carousel-page">
       <div className="container">
         {videos.length === 0 ? (
-          <div> <h2 className="text-center"> No videos found </h2></div>
+          <div> <h2 className="text-center">{t('no-video')} </h2></div>
         ) : (
         <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
           {videos.map((videos) => {
