@@ -12,16 +12,16 @@ function Contact(){
     return(
         <section className="cta-one">
             <div className="cta-one__shape-1 float-bob-x">
-                <img src={cta_one_shape_1} alt=""/>
+                <img src={cta_one_shape_1} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="cta-one__shape-2 float-bob-y">
-                <img src={cta_one_shape_2} alt=""/>
+                <img src={cta_one_shape_2} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="cta-one__shape-3 shape-mover">
-                <img src={cta_one_shape_3} alt=""/>
+                <img src={cta_one_shape_3} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="cta-one__shape-4 img-bounce">
-                <img src={cta_one_shape_4} alt=""/>
+                <img src={cta_one_shape_4} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="container">
                 <div className="cta-one__inner">

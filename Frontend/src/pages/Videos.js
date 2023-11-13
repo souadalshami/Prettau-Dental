@@ -143,7 +143,7 @@ function Videos(){
                         <div className="container">
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__logo">
-                                    <Link to="/"><img src={gold_logo} alt="" /></Link>
+                                    <Link to="/"><img src={gold_logo} alt={t('alt-logo')} /></Link>
                                 </div>
                                 <div className="main-menu__main-menu-box">
                                     <a href="#" className="mobile-nav__toggler"  onClick={() => setNavbarOpen((prev) => !prev)} ><i className="fa fa-bars"></i></a>
@@ -219,7 +219,7 @@ function Videos(){
                 <div className="mobile-nav__content">
                     <span className="mobile-nav__close mobile-nav__toggler"  onClick={() => setNavbarOpen(false)}><i className="fa fa-times"></i></span>
                     <div className="logo-box">
-                        <a href="index.html" aria-label="logo image"><img src={gold_logo} alt="" /></a>
+                        <a href="index.html" aria-label="logo image"><img src={gold_logo} alt={t('alt-logo')} /></a>
                     </div>
                     <div className="mobile-nav__container">
                         <ul className="main-menu__list">

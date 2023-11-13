@@ -26,16 +26,16 @@ function PageHeader(){
             <div class="page-header__bg">
             </div>
             <div class="page-header__shape-1 float-bob-y">
-                <img src={page_header_shape_1} alt=""/>
+                <img src={page_header_shape_1} alt={t('alt-shape-prettau')}/>
             </div>
             <div class="page-header__shape-2 float-bob-x">
-                <img src={page_header_shape_2} alt=""/>
+                <img src={page_header_shape_2} alt={t('alt-shape-prettau')}/>
             </div>
             <div class="page-header__shape-3 float-bob-y">
-                <img src={page_header_shape_3} alt=""/>
+                <img src={page_header_shape_3} alt={t('alt-shape-prettau')}/>
             </div>
             <div class="page-header__shape-4 float-bob-x">
-                <img src={page_header_shape_4} alt=""/>
+                <img src={page_header_shape_4} alt={t('alt-shape-prettau')}/>
             </div>
             <div class="container">
                 <div class="page-header__inner">
