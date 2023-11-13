@@ -8,7 +8,7 @@ import { t } from 'i18next';
 
 
 function BlogDetails({languageId}){
-    const { id } = useParams();
+    const { id ,blog_id} = useParams();
     const [loading, setLoading] = useState(false);
     const [blogs, setBlogs] = useState([]);
 
@@ -16,7 +16,7 @@ function BlogDetails({languageId}){
     const fetchBlogs = async () => {
         try {
           setLoading(true);
-          const apiUrl = `${API_ROOT}/get_blogs.php?languageId=${languageId}&categoryId=${id}`;
+          const apiUrl = `${API_ROOT}/get_single_blog.php?languageId=${languageId}&categoryId=${id}&blogId=${blog_id}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
           setBlogs(jsonData);
@@ -29,7 +29,7 @@ function BlogDetails({languageId}){
 
       useEffect(() => {
             fetchBlogs();
-        }, [languageId, id]);
+        }, [languageId, id,blog_id]);
 
     return(
         <section className="services-details">

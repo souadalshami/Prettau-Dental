@@ -49,13 +49,7 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/categories/:id" element={<Categories />} />
-            <Route path="/blogs/:id" element={<Blogs />} /> 
-            {/*  />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blogs" element={<Blogs />} /> */}
-            {/* <Route path="/blogs:id" element={<Blogs />} />  */}
+            <Route path="/blogs/:id/:blog_id" element={<Blogs />} /> 
           </Routes>
           <GoToTop/>
         </Router>

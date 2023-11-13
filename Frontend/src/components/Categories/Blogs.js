@@ -124,7 +124,7 @@ function Blogs({languageId}){
                                             </div>
                                             <div className="news-one__content">
                                                 <div className="news-one__content-top">
-                                                    <h3 className="news-one__title"><Link reloadDocument to={`/Blogs/${blogs.category_id}`}>{blogs.title}</Link></h3>
+                                                    <h3 className="news-one__title"><Link reloadDocument to={`/Blogs/${blogs.category_id}/${blogs.blog_id}`}>{blogs.title}</Link></h3>
                                                     <p className="news-one__text">{blogs.content}</p>
                                                 </div>
                                             </div>
