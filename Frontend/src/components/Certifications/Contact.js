@@ -1,5 +1,5 @@
 
-import background   from '../../assets/images/backgrounds/cta-four-bg.png'
+import background   from '../../assets/images/backgrounds/cta-four-bg.webp'
 import { Link } from 'react-router-dom'
 import { t } from "i18next";
 import { Trans } from 'react-i18next';

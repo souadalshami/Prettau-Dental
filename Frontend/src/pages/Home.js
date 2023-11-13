@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 import { API_ROOT } from '../config';
 
-import gold_logo from '../assets/images/logo/gold.png';
+import gold_logo from '../assets/images/logo/gold.webp';
 
 
 

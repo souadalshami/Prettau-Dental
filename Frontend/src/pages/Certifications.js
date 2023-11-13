@@ -2,7 +2,7 @@ import { useDocumentTitle } from '../setDocumentTitle';
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 
-import gold_logo from '../assets/images/logo/gold.png';
+import gold_logo from '../assets/images/logo/gold.webp';
 import { useState ,useEffect} from 'react';
 import PageFooter from '../components/layout/PageFooter';
 import Contact from '../components/Certifications/Contact';

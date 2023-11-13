@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import cta_one_shape_1 from '../../assets/images/shapes/cta-one-shape-1.png'
-import cta_one_shape_2 from '../../assets/images/shapes/cta-one-shape-2.png'
-import cta_one_shape_3 from '../../assets/images/shapes/cta-one-shape-3.png'
-import cta_one_shape_4 from '../../assets/images/shapes/cta-one-shape-4.png'
+import cta_one_shape_1 from '../../assets/images/shapes/cta-one-shape-1.webp'
+import cta_one_shape_2 from '../../assets/images/shapes/cta-one-shape-2.webp'
+import cta_one_shape_3 from '../../assets/images/shapes/cta-one-shape-3.webp'
+import cta_one_shape_4 from '../../assets/images/shapes/cta-one-shape-4.webp'
 import { t } from "i18next";
 import { Trans } from 'react-i18next';
 

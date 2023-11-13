@@ -1,7 +1,7 @@
 
-import services_one_shape_3 from '../../assets/images/shapes/services-one-shape-3.png'
-import services_one_shape_4 from '../../assets/images/shapes/services-one-shape-4.png'
-import background from '../../assets/images/services/services-one-hover-img-black.png'
+import services_one_shape_3 from '../../assets/images/shapes/services-one-shape-3.webp'
+import services_one_shape_4 from '../../assets/images/shapes/services-one-shape-4.webp'
+import background from '../../assets/images/services/services-one-hover-img-black.webp'
 
 import WOW from 'wowjs';
 import { useEffect, useState } from 'react'

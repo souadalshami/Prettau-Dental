@@ -1,5 +1,5 @@
 
-import process_one_shape_1 from '../../assets/images/shapes/process-one-shape-1.png';
+import process_one_shape_1 from '../../assets/images/shapes/process-one-shape-1.webp';
 import { t } from "i18next";
 import { Trans } from 'react-i18next';
 
