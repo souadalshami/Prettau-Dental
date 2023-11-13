@@ -75,7 +75,7 @@ function VideosSection({ languageId }) {
                     <Fancybox>
                       <a key={videos.title} data-fancybox href={videos.video_path} >
                         <div class="team-one__img">
-                          <img  className="card-img-top img-fluid" src={`${API_IMAGE_ROOT}${videos.path}`}alt=""/>
+                          <img  className="card-img-top img-fluid" src={`${API_IMAGE_ROOT}${videos.path}`} alt={videos.title}/>
                         </div>
                       </a>                            
                     </Fancybox>

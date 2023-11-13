@@ -1,37 +1,17 @@
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css"
+
 import Fancybox from "../Fancybox"; 
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
 import { API_IMAGE_ROOT } from '../../config';
 import { Trans } from 'react-i18next';
 import { t } from "i18next";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Navigation, Scrollbar, A11y,Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 
-const options = {
-    // "loop": true,
-    // "autoplay": true,
-    "margin": 30,
-    "nav": true,
-    "dots": false,
-    "smartSpeed": 500,
-    "autoplayTimeout": 10000,
-    "navText": ["<span class=\"icon-right-arrow\"></span>","<span class=\"icon-right-arrow1\"></span>"],
-    "responsive": {
-        "0": {
-            "items": 1
-        },
-        "768": {
-            "items": 2
-        },
-        "992": {
-            "items": 3
-        },
-        "1200": {
-            "items": 3
-        }
-    }
-}
 
 function CertificationsSection({ languageId }){
     const [certifications, setCertifications] = useState([]);
@@ -53,6 +33,32 @@ function CertificationsSection({ languageId }){
     useEffect(() => {
         fetchEvent();
       }, [languageId]);
+
+      const options = {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grabCursor: true,
+        Navigation:true,
+        speed: 700,
+        loop: true,
+        autoplay: {
+          delay: 10000,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+        },
+    };
     return(
         <section className="team-two">
             <div className="container">
@@ -67,33 +73,38 @@ function CertificationsSection({ languageId }){
                     </div>
                     <div className="col-xl-8">
                         <div className="team-two__right">
-                           
-                                <OwlCarousel className="team-two__carousel owl-carousel owl-theme thm-owl__carousel" {...options}>
-                                    {certifications.map((certifications) => {
-                                     return (
-                                        <div className="item">
-                                            <div className="team-two__single">                  
-                                                <Fancybox>
-                                                    <a  key={certifications.name} data-fancybox href={`${API_IMAGE_ROOT}/${certifications.path}`} className="img-popup" >
-                                                        <div className="team-two__img-box">
-                                                            <div className="team-two__img">
-                                                                <img src={`${API_IMAGE_ROOT}${certifications.path}`}alt=""/>
+                        {
+                            certifications.length === 0 ? (
+                            <div> <h2 className="text-center"> No Certifications Found </h2> </div>
+                            ) : (
+                            <Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} {...options}>
+                                {certifications.map((certifications) => {
+                                    return (
+                                        <SwiperSlide>
+                                            <div className="item">
+                                                <div className="team-two__single">                  
+                                                    <Fancybox>
+                                                        <a  key={certifications.name} data-fancybox href={`${API_IMAGE_ROOT}/${certifications.path}`} className="img-popup" >
+                                                            <div className="team-two__img-box">
+                                                                <div className="team-two__img">
+                                                                    <img src={`${API_IMAGE_ROOT}${certifications.path}`}alt=""/>
+                                                                </div>
                                                             </div>
+                                                        </a>
+                                                    </Fancybox>
+                                                    <div className="team-two__content">
+                                                        <div className="team-two__name-box">
+                                                            <h3 className="team-two__name">{certifications.title}
+                                                            </h3>
                                                         </div>
-                                                    </a>
-                                                </Fancybox>
-                                                <div className="team-two__content">
-                                                    <div className="team-two__name-box">
-                                                        <h3 className="team-two__name">{certifications.title}
-                                                        </h3>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </SwiperSlide>
                                     );      
-                                    })}
-                                </OwlCarousel>
-                            
+                                })}
+                            </Swiper>
+                        )}
                         </div>
                     </div>
                 </div>

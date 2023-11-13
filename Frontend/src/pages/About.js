@@ -2,7 +2,7 @@ import PageHeader from "../components/About/PageHeader";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDocumentTitle } from '../setDocumentTitle';
-import gold_logo from '../assets/images/logo/gold.png';
+import gold_logo from '../assets/images/logo/gold.webp';
 import { Link, NavLink } from "react-router-dom";
 import WorkProcess from "../components/About/WorkProcess";
 import AboutCompany from "../components/About/AboutCompany";

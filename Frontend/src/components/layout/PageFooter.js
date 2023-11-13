@@ -1,7 +1,7 @@
 
-import  site_footer_two_shape_1  from '../../assets/images/shapes/site-footer-two-shape-1.png'
-import site_footer_two_shape_2 from '../../assets/images/shapes/site-footer-two-shape-2.png'
-import logo from '../../assets/images/logo/white.png'
+import  site_footer_two_shape_1  from '../../assets/images/shapes/site-footer-two-shape-1.webp'
+import site_footer_two_shape_2 from '../../assets/images/shapes/site-footer-two-shape-2.webp'
+import logo from '../../assets/images/logo/white.webp'
 import { Link ,useParams} from 'react-router-dom';
 import WOW from 'wowjs';
 import { useEffect, useState } from 'react';
@@ -74,7 +74,7 @@ function PageFooter({ languageId }){
                         <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div className="footer-widget-two__column footer-widget-two__about">
                                 <div className="footer-widget-two__logo">
-                                    <Link to="/"><img src={logo} alt=""   /></Link>
+                                    <Link to="/"><img src={logo} alt={t('alt-logo')}   /></Link>
                                 </div>
                                 <p className="footer-widget-two__about-text"><Trans i18nKey="footer-description"></Trans></p>
                                 <div className="site-footer-two__social">

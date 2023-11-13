@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 // import background from '../../assets/images/backgrounds/page-header-bg.jpg'
-import page_header_shape_1 from '../../assets/images/shapes/page-header-shape-1.png'
-import page_header_shape_2 from '../../assets/images/shapes/page-header-shape-2.png'
-import page_header_shape_3 from '../../assets/images/shapes/page-header-shape-3.png'
-import page_header_shape_4 from '../../assets/images/shapes/page-header-shape-4.png'
+import page_header_shape_1 from '../../assets/images/shapes/page-header-shape-1.webp'
+import page_header_shape_2 from '../../assets/images/shapes/page-header-shape-2.webp'
+import page_header_shape_3 from '../../assets/images/shapes/page-header-shape-3.webp'
+import page_header_shape_4 from '../../assets/images/shapes/page-header-shape-4.webp'
 import { t } from "i18next";
 
 
@@ -16,16 +16,16 @@ function PageHeader(){
             <div className="page-header__bg">
             </div>
             <div className="page-header__shape-1 float-bob-y">
-                <img src={page_header_shape_1} alt=""/>
+                <img src={page_header_shape_1} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="page-header__shape-2 float-bob-x">
-                <img src={page_header_shape_2} alt=""/>
+                <img src={page_header_shape_2} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="page-header__shape-3 float-bob-y">
-                <img src={page_header_shape_3} alt=""/>
+                <img src={page_header_shape_3} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="page-header__shape-4 float-bob-x">
-                <img src={page_header_shape_4} alt=""/>
+                <img src={page_header_shape_4} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="container">
                 <div className="page-header__inner">

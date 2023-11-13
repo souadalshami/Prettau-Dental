@@ -1,5 +1,5 @@
 
-import background   from '../../assets/images/main-slide.jpg'
+import background   from '../../assets/images/main-slide.webp'
 import { Link } from 'react-router-dom';
 import Fancybox from "../Fancybox.js"; 
 import { t } from "i18next";
@@ -10,7 +10,7 @@ function MainSlider(){
     return(
         <section className="main-slider">
             <div class="image-container">
-                <img src={background} alt="Image"/>
+                <img src={background} alt= {t('alt-mainSlider-background')}/>
                 <div class="overlay"></div>
                 <div class="text-container">
                     <h2 className="main-title">{t('home-mainSlider-title-row-one')} <br/>{t('home-mainSlider-title-row-two')}</h2>

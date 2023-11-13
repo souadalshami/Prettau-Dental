@@ -4,12 +4,12 @@ import i18n from 'i18next';
 import WOW from 'wowjs';
 import { useEffect } from 'react'
 
-import about_shape1 from '../../assets/images/shapes/about-one-shape-1.png'
-import about_shape2 from '../../assets/images/shapes/about-one-shape-2.png'
-import about_shape3 from '../../assets/images/shapes/about-one-shape-3.png'
-import about_shape4 from '../../assets/images/shapes/about-one-shape-4.png'
-import about_one from '../../assets/images/resources/about-one-img-1.jpg'
-import about_two from '../../assets/images/resources/about-one-img-2.jpg'
+import about_shape1 from '../../assets/images/shapes/about-one-shape-1.webp'
+import about_shape2 from '../../assets/images/shapes/about-one-shape-2.webp'
+import about_shape3 from '../../assets/images/shapes/about-one-shape-3.webp'
+import about_shape4 from '../../assets/images/shapes/about-one-shape-4.webp'
+import about_one from '../../assets/images/resources/about-one-img-1.webp'
+import about_two from '../../assets/images/resources/about-one-img-2.webp'
 
 
 
@@ -22,10 +22,10 @@ function AboutUs(){
     return(
         <section className="about-one">
             <div className="about-one__shape-3 float-bob-y">
-                <img src={about_shape3} alt=""/>
+                <img src={about_shape3} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="about-one__shape-4 img-bounce">
-                <img src={about_shape4} alt=""/>
+                <img src={about_shape4} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="container">
                 <div className="row">
@@ -34,16 +34,16 @@ function AboutUs(){
                             <div className={`about-one__img-box  ${i18n.language == "1" ? "wow slideInLeft" : "wow slideInRight"}`} data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
                                 <div className="about-one__img">
-                                    <img src={about_one} alt=""/>
+                                    <img src={about_one} alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <div className="about-one__img-2">
-                                    <img src={about_two} alt=""/>
+                                    <img src={about_two} alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <div className="about-one__shape-1 float-bob-x">
-                                    <img src={about_shape1} alt=""/>
+                                    <img src={about_shape1} alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <div className="about-one__shape-2 float-bob-y">
-                                    <img src={about_shape2} alt=""/>
+                                    <img src={about_shape2} alt={t('alt-shape-prettau')}/>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 
 import { Link, NavLink } from "react-router-dom";
-import gold_logo from '../assets/images/logo/gold.png';
+import gold_logo from '../assets/images/logo/gold.webp';
 import { useDocumentTitle } from '../setDocumentTitle';
 import { useTranslation } from "react-i18next";
 import { useState ,useEffect} from 'react';
@@ -144,7 +144,7 @@ function Categories(){
                         <div className="container">
                             <div className="main-menu__wrapper-inner">
                                 <div className="main-menu__logo">
-                                    <Link to="/"><img src={gold_logo} alt="" /></Link>
+                                    <Link to="/"><img src={gold_logo} alt={t('alt-logo')} /></Link>
                                 </div>
                                 <div className="main-menu__main-menu-box">
                                     <a href="#" className="mobile-nav__toggler"  onClick={() => setNavbarOpen((prev) => !prev)} ><i className="fa fa-bars"></i></a>
@@ -220,7 +220,7 @@ function Categories(){
                 <div className="mobile-nav__content">
                     <span className="mobile-nav__close mobile-nav__toggler"  onClick={() => setNavbarOpen(false)}><i className="fa fa-times"></i></span>
                     <div className="logo-box">
-                        <a href="index.html" aria-label="logo image"><img src={gold_logo} alt="" /></a>
+                        <a href="index.html" aria-label="logo image"><img src={gold_logo} alt={t('alt-logo')} /></a>
                     </div>
                     <div className="mobile-nav__container">
                         <ul className="main-menu__list">

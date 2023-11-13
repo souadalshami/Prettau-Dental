@@ -1,9 +1,9 @@
 
-import about_two_shape_2 from '../../assets/images/shapes/about-two-shape-2.png'
-import about_two_shape_3 from '../../assets/images/shapes/about-two-shape-3.png'
-import about_two_img_1 from '../../assets/images/resources/about-two-img-1.jpg'
-import about_two_img_2 from '../../assets/images/resources/about-two-img-2.jpg'
-import about_two_img_3 from '../../assets/images/resources/about-two-img-3.jpg'
+import about_two_shape_2 from '../../assets/images/shapes/about-two-shape-2.webp'
+import about_two_shape_3 from '../../assets/images/shapes/about-two-shape-3.webp'
+import about_two_img_1 from '../../assets/images/resources/about-two-img-1.webp'
+import about_two_img_2 from '../../assets/images/resources/about-two-img-2.webp'
+import about_two_img_3 from '../../assets/images/resources/about-two-img-3.webp'
 import CountUp from "react-countup";
 import Fancybox from "../Fancybox"; 
 import WOW from 'wowjs';
@@ -20,10 +20,10 @@ function AboutCompany(){
     return(
         <section className="about-two">
             <div className="about-two__shape-2 zoominout">
-                <img src={about_two_shape_2} alt=""/>
+                <img src={about_two_shape_2} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="about-two__shape-3 float-bob-y">
-                <img src={about_two_shape_3} alt=""/>
+                <img src={about_two_shape_3} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="container">
                 <div className="row">
@@ -66,7 +66,7 @@ function AboutCompany(){
                             <div className={`about-two__img  ${i18n.language == "1" ? "wow slideInRight" : "wow slideInLeft"}`} data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
                                 <div className="about-two__shape-1 img-bounce">
-                                    <img src={about_two_shape_2}  alt=""/>
+                                    <img src={about_two_shape_2}  alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <img src={about_two_img_1} alt=""/>
                                 <div className="about-two__video-link">
