@@ -7,8 +7,7 @@ import { Trans } from 'react-i18next';
 import { t } from "i18next";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Navigation, Scrollbar, A11y,Autoplay } from 'swiper/modules';
-import 'swiper/css/navigation';
+import { Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
@@ -38,7 +37,6 @@ function CertificationsSection({ languageId }){
         slidesPerView: 3,
         spaceBetween: 30,
         grabCursor: true,
-        Navigation:true,
         speed: 700,
         loop: true,
         autoplay: {
@@ -77,10 +75,10 @@ function CertificationsSection({ languageId }){
                             certifications.length === 0 ? (
                             <div> <h2 className="text-center">{t('no-certifications')} </h2> </div>
                             ) : (
-                            <Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} {...options}>
+                            <Swiper modules={[Scrollbar, A11y, Autoplay]} {...options}>
                                 {certifications.map((certifications) => {
                                     return (
-                                        <SwiperSlide>
+                                        <SwiperSlide key={certifications.id}>
                                             <div className="item">
                                                 <div className="team-two__single">                  
                                                     <Fancybox>

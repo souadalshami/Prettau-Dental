@@ -90,7 +90,7 @@ function Blogs({languageId}){
                                 <ul className="sidebar__category-list list-unstyled">
                                     {solutions.map((solutions) => {
                                         return (
-                                            <li><Link reloadDocument to={`/solutions/${solutions.id}`}> {solutions.name} <span className="icon-right-arrow1"></span></Link></li>
+                                            <li key={solutions.id}><Link reloadDocument to={`/solutions/${solutions.id}`}> {solutions.name} <span className="icon-right-arrow1"></span></Link></li>
                                         );
                                     })}
                                 </ul>
@@ -118,7 +118,7 @@ function Blogs({languageId}){
                         <div className="row">
                             {blogs.map((blogs) => {
                                 return(
-                                    <div className="col-xl-6 wow fadeInLeft" data-wow-delay="100ms">
+                                    <div key={blogs.id} className="col-xl-6 wow fadeInLeft" data-wow-delay="100ms">
                                         <div className="news-one__single">
                                             <div className="news-one__img-box">
                                                 <div className="news-one__img">
