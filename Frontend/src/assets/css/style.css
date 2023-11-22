@@ -32,9 +32,9 @@ img{
 .footer-widget__company-list li+li{
     margin-top: 0 !important;
 }
-.brand-one__img{
+/* .brand-one__img{
     filter: brightness(0) invert(1);
-}
+} */
 .brand-one__inner{
     padding: 40px 0 30px !important
 }
@@ -359,6 +359,8 @@ left: 0px !important;
     margin-top: 260px;
     text-transform: capitalize;
     color: white;
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
 
   }
 

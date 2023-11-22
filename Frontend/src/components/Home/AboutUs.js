@@ -37,7 +37,7 @@ function AboutUs(){
                                     <img src={about_one} alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <div className="about-one__img-2">
-                                    <img src={about_two} alt={t('alt-shape-prettau')}/>
+                                    <img src={about_two} alt="Prettau Dental Building"/>
                                 </div>
                                 <div className="about-one__shape-1 float-bob-x">
                                     <img src={about_shape1} alt={t('alt-shape-prettau')}/>

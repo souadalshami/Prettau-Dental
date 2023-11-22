@@ -36,8 +36,8 @@ function AboutCompany(){
                                     <div className="about-two__count count-box">
                                         <h3 className="count-text" data-stop="10" data-speed="1500">
                                             <CountUp
-                                                end={7}
-                                                duration={7}
+                                                end={23}
+                                                duration={23}
                                                 enableScrollSpy
                                                 scrollSpyOnce
                                             /></h3>
@@ -46,17 +46,17 @@ function AboutCompany(){
                                 </li>
                                 <li>
                                     <div className="about-two__count count-box">
-                                        <h3 className="count-text" data-stop="8" data-speed="1500">
+                                        <h3 className="count-text" data-stop="800" data-speed="3000">
                                             <CountUp
-                                                end={11}
-                                                duration={8}
+                                                end={800}
+                                                duration={800}
                                                 enableScrollSpy
                                                 scrollSpyOnce
                                             />
                                         </h3>
-                                        <span>{t('about-solution-k')}</span>
+                                        <span>+</span>
                                     </div>
-                                    <Trans i18nKey="about-solution-completed"></Trans>
+                                    <p> <Trans i18nKey="about-counter-Successful"></Trans> </p>
                                 </li>
                             </ul>
                         </div>
@@ -68,13 +68,13 @@ function AboutCompany(){
                                 <div className="about-two__shape-1 img-bounce">
                                     <img src={about_two_shape_2}  alt={t('alt-shape-prettau')}/>
                                 </div>
-                                <img src={about_two_img_1} alt=""/>
+                                <img src={about_two_img_1} alt="Prettau Dental Lab Building"/>
                                 <div className="about-two__video-link">
                                 <Fancybox>
-                                    <a data-fancybox href="https://www.youtube.com/watch?v=tiSiJ-8y6J8" class="video-popup">
-                                        <div class="services-details__video-icon">
-                                            <span class="fa fa-play"></span>
-                                            <i class="ripple"></i>
+                                    <a data-fancybox href="https://www.youtube.com/watch?v=tiSiJ-8y6J8" className="video-popup">
+                                        <div className="services-details__video-icon">
+                                            <span className="fa fa-play"></span>
+                                            <i className="ripple"></i>
                                         </div>
                                     </a>
                                     </Fancybox>
@@ -86,21 +86,21 @@ function AboutCompany(){
 
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
-                        <h3 class="services-details__title-1">{t('about-solution-two-title')}</h3>
-                        <p class="services-details__text-1">
+                        <h3 className="services-details__title-1">{t('about-solution-two-title')}</h3>
+                        <p className="services-details__text-1">
                             {t('about-solution-two-description')}
                         </p>
-                        <div class="services-details__img-and-feature">
-                            <div class="services-details__feature-img">
+                        <div className="services-details__img-and-feature">
+                            <div className="services-details__feature-img">
                                 <img src={about_two_img_2} alt=""/>
-                                <div class="services-details__video-link">
+                                <div className="services-details__video-link">
                                     
                                 
                                 </div>
                             </div>
-                            <div class="services-details__feature">
-                                <h3 class="services-details__feature-title">{t('about-solution-three-title')}</h3>
-                                <p class="services-details__feature-text">
+                            <div className="services-details__feature">
+                                <h3 className="services-details__feature-title">{t('about-solution-three-title')}</h3>
+                                <p className="services-details__feature-text">
                                     <Trans i18nKey="about-solution-three-description"></Trans>
                                 </p>
                             </div>
@@ -109,19 +109,19 @@ function AboutCompany(){
                 </div>
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
-                        <p class="services-details__text-1">
+                        <p className="services-details__text-1">
                             <Trans i18nKey="about-solution-four-description"></Trans>
                         </p>
-                        <div class="services-details__img-and-feature">
-                            <div class="services-details__feature_two">
-                                <h3 class="services-details__feature-title">{t('about-solution-five-title')}</h3>
-                                <p class="services-details__feature-text">
+                        <div className="services-details__img-and-feature">
+                            <div className="services-details__feature_two">
+                                <h3 className="services-details__feature-title">{t('about-solution-five-title')}</h3>
+                                <p className="services-details__feature-text">
                                     <Trans i18nKey="about-solution-five-description"></Trans>
                                 </p>
                             </div>
-                            <div class="services-details__feature-img">
+                            <div className="services-details__feature-img">
                                 <img src={about_two_img_3} alt=""/>
-                                <div class="services-details__video-link">
+                                <div className="services-details__video-link">
                                 </div>
                             </div>
                         </div>

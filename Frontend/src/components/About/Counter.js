@@ -51,15 +51,13 @@ function Counter(){
                             <div className="counter-one__count count-box">
                                 <h3 className="count-text" data-stop="789" data-speed="1500">
                                 <CountUp
-                                    end={100}
+                                    end={800}
                                     duration={11}
                                     enableScrollSpy
                                     scrollSpyOnce
                                 />
                                 </h3>
-                                <span>
-                                    {t('about-solution-k')}
-                                </span>
+                                <span>+</span>
                             </div>
                             <p className="counter-one__text">
                                 {t('about-counter-Successful')}
