@@ -234,7 +234,7 @@ function Blogs(){
                                 <button aria-label="dropdown toggler" className={`${toggle ? 'expanded' : ''}`}  onClick={() => setToggle(!toggle)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {toggle && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     {solutions.map((solution) => { 
                                         return (
                                             <li key={solution.id}><Link reloadDocument to={`/solutions/${solution.id}`}> {solution.name}</Link></li>

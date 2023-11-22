@@ -245,7 +245,7 @@ function Home(){
                                 <button aria-label="dropdown toggler" className={`${toggle ? 'expanded' : ''}`}  onClick={() => setToggle(!toggle)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {toggle && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     {solutions.map((solution) => { 
                                         return (
                                             <li key={solution.id}><Link reloadDocument to={`/solutions/${solution.id}`}> {solution.name}</Link></li>
@@ -273,7 +273,7 @@ function Home(){
                                 <button aria-label="dropdown toggler" className={`${togglelanguage ? 'expanded' : ''}`}  onClick={() => setToggleLanguage(!togglelanguage)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {togglelanguage && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     <li>
                                         <button className="mobile-language-btn" onClick={handleLanguageChange} value='1'>English</button>
                                     </li>

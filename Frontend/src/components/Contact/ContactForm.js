@@ -78,7 +78,7 @@ function ContactForm() {
                 <h3 className="contact-page__title">{t('contact-form-get-in-touch')}</h3>
                 <p className="contact-page__sub-title">{t('contact-form-get-in-touch-description')}</p>
                 <div className="contact-page__form-box">
-                  <div className="contact-page__form contact-form-validated" novalidate="novalidate">
+                  <div className="contact-page__form contact-form-validated" noValidate="novalidate">
                     <form onSubmit={handleSubmit}>
                       <div className="row">
                         <div className="col-xl-12">

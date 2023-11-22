@@ -7,16 +7,16 @@ import { Trans } from 'react-i18next';
 function Contact(){
 
     return(
-        <section class="cta-four">
-            <div class="container">
-                <div class="cta-four__inner">
-                    <div class="cta-four__bg float-bob-x"  style={{ backgroundImage: `url(${background})` }}>
+        <section className="cta-four">
+            <div className="container">
+                <div className="cta-four__inner">
+                    <div className="cta-four__bg float-bob-x"  style={{ backgroundImage: `url(${background})` }}>
                     </div>
-                    <h3 class="cta-four__title">
+                    <h3 className="cta-four__title">
                         <Trans i18nKey="certificates-contact-title"></Trans>
                     </h3>
-                    <div class="cta-four__btn-box">
-                        <Link to="/contact" class="cta-four__btn thm-btn">{t('certificates-contact-button')}</Link>
+                    <div className="cta-four__btn-box">
+                        <Link to="/contact" className="cta-four__btn thm-btn">{t('certificates-contact-button')}</Link>
                     </div>
                 </div>
             </div>

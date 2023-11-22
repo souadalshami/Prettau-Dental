@@ -22,29 +22,29 @@ function PageHeader(){
     // },[]);
 
     return(
-        <section class="page-header">
-            <div class="page-header__bg">
+        <section className="page-header">
+            <div className="page-header__bg">
             </div>
-            <div class="page-header__shape-1 float-bob-y">
+            <div className="page-header__shape-1 float-bob-y">
                 <img src={page_header_shape_1} alt=""/>
             </div>
-            <div class="page-header__shape-2 float-bob-x">
+            <div className="page-header__shape-2 float-bob-x">
                 <img src={page_header_shape_2} alt=""/>
             </div>
-            <div class="page-header__shape-3 float-bob-y">
+            <div className="page-header__shape-3 float-bob-y">
                 <img src={page_header_shape_3} alt=""/>
             </div>
-            <div class="page-header__shape-4 float-bob-x">
+            <div className="page-header__shape-4 float-bob-x">
                 <img src={page_header_shape_4} alt=""/>
             </div>
-            <div class="container">
-                <div class="page-header__inner">
+            <div className="container">
+                <div className="page-header__inner">
    
                             <h2>{t('blogs')}</h2>
                        
-                    <ul class="thm-breadcrumb list-unstyled">
+                    <ul className="thm-breadcrumb list-unstyled">
                         <li><Link to="/">{t('home')}</Link></li>
-                        <li><span class="icon-down-arrow"></span></li>
+                        <li><span className="icon-down-arrow"></span></li>
                        
                             {/* {item.slice(0,1).map((item) => {
                             return (
@@ -52,7 +52,7 @@ function PageHeader(){
                             );
                         })} */}
                            
-                        {/* <li><span class="icon-down-arrow"></span></li> */}
+                        {/* <li><span className="icon-down-arrow"></span></li> */}
                         {/* {item.slice(0,1).map((item) => {
                         return ( */}
                             <li>{t('blogs')}</li>

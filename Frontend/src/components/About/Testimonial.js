@@ -37,7 +37,7 @@ function Testimonial(){
             <div className="container">
                 <h3 className="section__title-two">{t('about-testimonial-title')}</h3>
                 <div className="testimonial-two__bottom">
-                    <OwlCarousel classNameName="testimonial-two__carousel owl-carousel owl-theme thm-owl__carousel " {...options}>
+                    <OwlCarousel className="testimonial-two__carousel owl-carousel owl-theme thm-owl__carousel " {...options}>
                         <div className="hight">
                             <div className="testimonial-two__single">
                                 <div className="testimonial-two__client-img">

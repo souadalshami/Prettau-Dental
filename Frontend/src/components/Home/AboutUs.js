@@ -34,10 +34,10 @@ function AboutUs(){
                             <div className={`about-one__img-box  ${i18n.language == "1" ? "wow slideInLeft" : "wow slideInRight"}`} data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
                                 <div className="about-one__img">
-                                    <img src={about_one} alt=""/>
+                                    <img src={about_one} alt="Dentists Prettau Dental Lab"/>
                                 </div>
                                 <div className="about-one__img-2">
-                                    <img src={about_two} alt=""/>
+                                    <img src={about_two} alt="Prettau Dental Building"/>
                                 </div>
                                 <div className="about-one__shape-1 float-bob-x">
                                     <img src={about_shape1} alt=""/>

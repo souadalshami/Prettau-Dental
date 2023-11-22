@@ -66,10 +66,10 @@ function Brand({ languageId }){
             <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
               {brand.map((brand) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={brand.id} >
                     <div className="brand-one__single">
-                      <div  key={brand.path} className="brand-one__img">
-                        <a href={brand.path} target="_blank">
+                      <div className="brand-one__img">
+                        <a href={brand.brand_path} target="_blank">
                           <img src={`${ROOT}${brand.path}`} alt=""/>
                         </a>
                       </div>
