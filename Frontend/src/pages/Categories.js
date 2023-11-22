@@ -90,7 +90,10 @@ function Categories(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(` Categories|| Prettau Dental Lab`);
+      useEffect(() => {
+        document.title = `${t('categories')} || Prettau Dental Lab`;
+      }, [t]);
+      
     return(
         <div>
             <header className="main-header">

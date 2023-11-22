@@ -2,7 +2,7 @@ import Fancybox from "../Fancybox.js";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 import 'swiper/css';
 import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper/modules';
 import 'swiper/css/navigation';
@@ -75,7 +75,7 @@ function VideosSection({ languageId }) {
                     <Fancybox>
                       <a key={videos.title} data-fancybox href={videos.video_path} >
                         <div class="team-one__img">
-                          <img  className="card-img-top img-fluid" src={`${API_IMAGE_ROOT}${videos.path}`} alt={videos.title}/>
+                          <img  className="card-img-top img-fluid" src={`${ROOT}${videos.path}`} alt={videos.title}/>
                         </div>
                       </a>                            
                     </Fancybox>

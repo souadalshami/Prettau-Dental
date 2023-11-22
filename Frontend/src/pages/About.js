@@ -92,7 +92,9 @@ function About(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(` About  || Prettau Dental Lab`);
+      useEffect(() => {
+        document.title = `${t('about')} || Prettau Dental Lab`;
+      }, [t]);
     return(
         <div>
             <header className="main-header">

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Link, Route, useParams } from 'react-router-dom';
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 import { t } from "i18next";
 
 
@@ -85,7 +85,7 @@ function Categories({ languageId }){
                                         <div className="news-one__single">
                                             <div className="news-one__img-box">
                                                 <div className="news-one__img">
-                                                    <img src={`${API_IMAGE_ROOT}/${categories.path}`} alt=""/>
+                                                    <img src={`${ROOT}/${categories.path}`} alt=""/>
                                                 </div>
                                             </div>
                                             <div className="news-one__content">
