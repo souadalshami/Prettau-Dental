@@ -17,6 +17,7 @@ import { API_ROOT } from '../config';
 function About(){
     const phoneNumber = "+964 770 037 2464";
     const [toggle, setToggle] = useState(false)
+    const [togglelanguage, setToggleLanguage] = useState(false)
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [color,setColor] = useState(false);
     const { t, i18n } = useTranslation();
@@ -258,6 +259,26 @@ function About(){
                             <li className="dropdown current megamenu">
                                 <Link to="/contact">{t('contact')}  </Link>
                             </li>    
+                              <div className="language">
+                    <ul className="main-menu__list">
+                        <li className="dropdown current megamenu" >
+                            <a href="#" id="language-link"> EN
+                                <button aria-label="dropdown toggler" className={`${togglelanguage ? 'expanded' : ''}`}  onClick={() => setToggleLanguage(!togglelanguage)}><i className="fa fa-angle-down"></i></button>
+                            </a>
+                            {togglelanguage && (
+                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                    <li>
+                                        <button className="mobile-language-btn" onClick={handleLanguageChange} value='1'>English</button>
+                                    </li>
+                                    
+                                    <li>
+                                        <button className="mobile-language-btn"  onClick={handleLanguageChange} value='2'>Arabic</button>
+                                    </li>
+                                </ul>
+                            )}
+                        </li> 
+                    </ul>
+                             </div> 
                         </ul>
                     </div>
 
