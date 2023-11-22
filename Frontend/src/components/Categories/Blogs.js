@@ -2,8 +2,8 @@ import { useState ,useEffect} from "react";
 import { Link, Route, useParams } from 'react-router-dom';
 import { API_ROOT } from '../../config';
 import { t } from "i18next";
-import { API_IMAGE_ROOT } from '../../config';
-
+import { ROOT } from '../../config';
+import he from 'he';
 
 function Blogs({languageId}){
 
@@ -58,7 +58,10 @@ function Blogs({languageId}){
           const apiUrl = `${API_ROOT}/get_blogs.php?languageId=${languageId}&categoryId=${id}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
-          setBlogs(jsonData);
+          const decodedBlogs = jsonData.map((blog) => ({...blog,
+            content: he.decode(blog.content),
+          }));
+          setBlogs(decodedBlogs);
           setLoading(false);
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -119,13 +122,14 @@ function Blogs({languageId}){
                                         <div className="news-one__single">
                                             <div className="news-one__img-box">
                                                 <div className="news-one__img">
-                                                    <img src={`${API_IMAGE_ROOT}${blogs.path}`} alt=""/>
+                                                    <img src={`${ROOT}${blogs.path}`} alt=""/>
                                                 </div>
                                             </div>
                                             <div className="news-one__content">
                                                 <div className="news-one__content-top">
                                                     <h3 className="news-one__title"><Link reloadDocument to={`/Blogs/${blogs.category_id}/${blogs.blog_id}`}>{blogs.title}</Link></h3>
-                                                    <p className="news-one__text">{blogs.content}</p>
+                                                    <p className="news-one__text" dangerouslySetInnerHTML={{ __html: blogs.content.substring(0, 100) }}></p>
+
                                                 </div>
                                             </div>
                                         </div>

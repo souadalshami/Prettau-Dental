@@ -91,7 +91,9 @@ function Contact( ){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`Contact || Prettau Dental Lab`);
+      useEffect(() => {
+        document.title = `${t('contact')} || Prettau Dental Lab`;
+      }, [t]);
     return(
         <div>
             <header className="main-header">

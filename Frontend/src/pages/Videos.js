@@ -89,7 +89,11 @@ function Videos(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(` Videos || Prettau Dental Lab`);
+      
+      useEffect(() => {
+        document.title = `${t('videos')} || Prettau Dental Lab`;
+      }, [t]);
+
     return(
         <div>
             <header className="main-header">

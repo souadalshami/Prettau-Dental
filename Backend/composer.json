@@ -1,0 +1,13 @@
+{
+    "name": "asus/backend",
+    "authors": [
+        {
+            "name": "souadalshami",
+            "email": "70814584+souadalshami@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.3",
+        "google/recaptcha": "^1.2"
+    }
+}
