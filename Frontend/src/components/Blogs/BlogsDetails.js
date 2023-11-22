@@ -75,11 +75,11 @@ function BlogDetails({languageId}){
                     <div className="services-details__right">
                     {blogs.map((blogs) => {
                         return (
-                            <>
-                                <div className="services-details__img">
+                            <div key={blogs.id}>
+                                <div  className="services-details__img">
                                     <div  style={ {width:"100%" }}>
                                         <ReactCompareSlider dir="ltr"
-                                            itemOne={<ReactCompareSliderImage src={`${ROOT}${blogs.path}`} srcSet={`${ROOT}${blogs.path}`} leftlaba alt="Image one" />} 
+                                            itemOne={<ReactCompareSliderImage src={`${ROOT}${blogs.path}`} srcSet={`${ROOT}${blogs.path}`}  alt="Image one" />} 
                                             itemTwo={<ReactCompareSliderImage src={`${ROOT}${blogs.path2}`} srcSet={`${ROOT}${blogs.path2}`} alt="Image two" />}
                                         />
                                     </div> 
@@ -90,7 +90,7 @@ function BlogDetails({languageId}){
                                     </h3>
                                     <p className="services-details__text-1" dangerouslySetInnerHTML={{ __html: blogs.content }}></p>
                                 </div>
-                            </>
+                            </div>
                             );
                         })}
                     </div>
