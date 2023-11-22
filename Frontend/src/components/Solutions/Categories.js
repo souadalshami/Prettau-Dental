@@ -78,7 +78,7 @@ function Categories({ languageId }){
               <div>Loading...</div>
             ) : categories.length === 0 ? (
               <div>
-                <h4 className="text-center">No Categories found for this solution</h4>
+                <h4 className="text-center">{t('no-categories')}</h4>
               </div>
             ) : (
               <div className="row">

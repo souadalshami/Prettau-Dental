@@ -66,7 +66,6 @@
  "person-name":"محمد ال..",
  "contact-form-message":"الرسالة",
  "contact-working-time":"اوقات الدوام",
- "contact-form-oprional":"(اختياري)",
  "contact-call-us":"اتصل بنا",
  "contact-mail-us":"راسلنا عبر البريد الإلكتروني",
  "contact-address":"المقر الرسمي",
@@ -108,8 +107,12 @@
  "alt-shape-prettau":"شكل بريتاو",
  "no-certifications": "لا يوجد شهادات ",
   "no-video": "لا يوجد فيديوهات",
- "no-events": "لا يوجد اخبار و فعاليات"
-
+ "no-events": "لا يوجد اخبار و فعاليات",
+"contact-form-typehere":"اكتب هنا...",
+"alt-prettau-building":"بناء مخبر بريتاو",
+ "alt-prettau-laboratory":"مخبري اسنان يعمل لدى مخبر بريتاو",
+ "alt-prettau-event":"فعالية في بريتاو",
+ "no-categories":"لا يوجد فئات لعرضها"
 
 
 
