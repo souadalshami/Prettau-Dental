@@ -75,7 +75,7 @@ function CertificationsSection({ languageId }){
                         <div className="team-two__right">
                         {
                             certifications.length === 0 ? (
-                            <div> <h2 className="text-center"> No Certifications Found </h2> </div>
+                            <div> <h2 className="text-center">{t('no-certifications')} </h2> </div>
                             ) : (
                             <Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} {...options}>
                                 {certifications.map((certifications) => {

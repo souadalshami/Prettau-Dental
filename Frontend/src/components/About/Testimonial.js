@@ -2,7 +2,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import testimonial_1 from '../../assets/images/testimonial/testimonial-1-1.jpg'
+// import testimonial_1 from '../../assets/images/testimonial/testimonial-1-1.jpg'
 import { t } from "i18next";
 import { Trans } from 'react-i18next';
 
