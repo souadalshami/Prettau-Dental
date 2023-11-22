@@ -26,7 +26,7 @@ function PageHeader(){
             <div className="page-header__bg">
             </div>
             <div className="page-header__shape-1 float-bob-y">
-                <img src={page_header_shape_1} alt=""/>
+                <img src={page_header_shape_1} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="page-header__shape-2 float-bob-x">
                 <img src={page_header_shape_2} alt={t('alt-shape-prettau')}/>
