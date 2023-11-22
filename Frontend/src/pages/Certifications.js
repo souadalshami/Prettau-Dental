@@ -267,7 +267,7 @@ function Certifications(){
                                 <button aria-label="dropdown toggler" className={`${togglelanguage ? 'expanded' : ''}`}  onClick={() => setToggleLanguage(!togglelanguage)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {togglelanguage && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     <li>
                                         <button className="mobile-language-btn" onClick={handleLanguageChange} value='1'>English</button>
                                     </li>
