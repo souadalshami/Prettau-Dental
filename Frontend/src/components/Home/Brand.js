@@ -64,7 +64,7 @@ function Brand({ languageId }){
     <section className="brand-one">
       <div className="container">
         <div className="brand-one__inner">
-          <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
+          <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options} dir="ltr">
             {brand.map((brand) => {
               return (
                 <SwiperSlide key={brand.id}>
