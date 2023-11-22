@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 import { useParams } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -71,7 +71,7 @@ function Brand({ languageId }){
                   <div key={brand.id} className="brand-one__single">
                     <div  key={brand.path} className="brand-one__img">
                       <a href={brand.brand_path} target="_blank">
-                        <img src={`${API_IMAGE_ROOT}${brand.path}`}alt=""/>
+                        <img src={`${ROOT}${brand.path}`}alt=""/>
                       </a>
                     </div>
                   </div>

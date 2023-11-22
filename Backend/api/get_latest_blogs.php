@@ -12,7 +12,7 @@ try {
     $languageId = (int) $_GET['languageId'];
 
     $query = "
-        SELECT b.id, blog.title, blog.content, blog.image, blog.path, blog.image_after, blog.path2, blog.category_id
+        SELECT b.id, blog.title, blog.content, blog.image, blog.path, blog.image_after, blog.path2, blog.category_id,blog.blog_id
         FROM blogs b
         JOIN blogs_lang blog ON blog.blog_id = b.id
         WHERE blog.lang_id = :languageId

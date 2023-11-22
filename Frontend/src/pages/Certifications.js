@@ -92,7 +92,9 @@ function Certifications(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`Certifications || Prettau Dental Lab`);
+      useEffect(() => {
+        document.title = `${t('certifications')} || Prettau Dental Lab`;
+      }, [t]);
     return(
         <div>
             <header className="main-header">

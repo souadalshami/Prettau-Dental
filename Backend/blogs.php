@@ -97,10 +97,9 @@ if (isset($_SESSION['Username'])) {
                     <h4 class="py-3 mb-4"><span class="text-muted fw-light"> Blogs</h4>
                     <div class="card mb-4">
                         <h5 class="card-header">Blogs
-                            <button type="button" class="btn btn-primary float-end"  data-bs-toggle="modal"
-                                data-bs-target="#modalCenter">
+                            <a type="button" class="btn btn-primary float-end" href="./add_blog.php" target="_blank">
                                 Add
-                            </button>
+                            </a>
                         </h5>
                         
                         <div class="card-body">
@@ -208,7 +207,7 @@ if (isset($_SESSION['Username'])) {
                                             <tr>
                                                 <td><?= $counter; ?></td>
                                                 <td><?= $blog->title; ?></td>
-                                                <td><?= $blog->content; ?></td>
+                                                <td><?= substr($blog->content, 0, 100); ?></td>
                                                 <td><img src="<?= $blog->path?> "align="center"  style="width:100px"/></td>
                                                 <td><img src="<?= $blog->path2?> "align="center"  style="width:100px"/></td>
                                                 <form action="" method="POST">

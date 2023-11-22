@@ -90,7 +90,9 @@ function Events(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(` Events || Prettau Dental Lab`);
+      useEffect(() => {
+        document.title = `${t('events')} || Prettau Dental Lab`;
+      }, [t]);
     return(
         <div>
             <header className="main-header">

@@ -3,12 +3,12 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 import { t } from 'i18next';
-
+import he from 'he';
 
 function BlogDetails({languageId}){
-    const { id } = useParams();
+    const { id ,blog_id} = useParams();
     const [loading, setLoading] = useState(false);
     const [blogs, setBlogs] = useState([]);
 
@@ -16,10 +16,13 @@ function BlogDetails({languageId}){
     const fetchBlogs = async () => {
         try {
           setLoading(true);
-          const apiUrl = `${API_ROOT}/get_blogs.php?languageId=${languageId}&categoryId=${id}`;
+          const apiUrl = `${API_ROOT}/get_single_blog.php?languageId=${languageId}&categoryId=${id}&blogId=${blog_id}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
-          setBlogs(jsonData);
+          const decodedBlogs = jsonData.map((blog) => ({...blog,
+            content: he.decode(blog.content),
+          }));
+          setBlogs(decodedBlogs);
           setLoading(false);
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -29,7 +32,7 @@ function BlogDetails({languageId}){
 
       useEffect(() => {
             fetchBlogs();
-        }, [languageId, id]);
+        }, [languageId, id,blog_id]);
 
     return(
         <section className="services-details">
@@ -76,8 +79,8 @@ function BlogDetails({languageId}){
                                 <div className="services-details__img">
                                     <div  style={ {width:"100%" }}>
                                         <ReactCompareSlider dir="ltr"
-                                            itemOne={<ReactCompareSliderImage src={`${API_IMAGE_ROOT}${blogs.path}`} srcSet={`${API_IMAGE_ROOT}${blogs.path}`} leftlaba alt="Image one" />} 
-                                            itemTwo={<ReactCompareSliderImage src={`${API_IMAGE_ROOT}${blogs.path2}`} srcSet={`${API_IMAGE_ROOT}${blogs.path2}`} alt="Image two" />}
+                                            itemOne={<ReactCompareSliderImage src={`${ROOT}${blogs.path}`} srcSet={`${ROOT}${blogs.path}`} leftlaba alt="Image one" />} 
+                                            itemTwo={<ReactCompareSliderImage src={`${ROOT}${blogs.path2}`} srcSet={`${ROOT}${blogs.path2}`} alt="Image two" />}
                                         />
                                     </div> 
                                 </div>
@@ -85,8 +88,7 @@ function BlogDetails({languageId}){
                                     <h3 className="services-details__title-1">
                                         {blogs.title}
                                     </h3>
-                                    <p className="services-details__text-1">{blogs.content}
-                                    </p>
+                                    <p className="services-details__text-1" dangerouslySetInnerHTML={{ __html: blogs.content }}></p>
                                 </div>
                             </>
                             );

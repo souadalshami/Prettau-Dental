@@ -6,7 +6,7 @@ import shapeone from "../../assets/images/shapes/portfolio-one-shape-1.webp"
 import shapetwo from "../../assets/images/shapes/portfolio-one-shape-2.webp"
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 
 import WOW from 'wowjs';
 import 'swiper/css';
@@ -95,14 +95,14 @@ function EventsSection({ languageId }){
                             <div className="portfolio-one__single">
                               <div className="portfolio-one__img-box">
                                 <div className="portfolio-one__img">
-                                  <img  src={`${API_IMAGE_ROOT}${events.path}`} alt={events.name} />
+                                  <img  src={`${ROOT}${events.path}`} alt={events.name} />
                                 </div>
                                 <div className="portfolio-one__content">
                                   <p className="portfolio-one__sub-title">{events.title}</p>
                                 </div>
                                 <div className="portfolio-one__arrow">
                                   <Fancybox>
-                                    <a key={events.name}  data-fancybox="gallery" href={`${API_IMAGE_ROOT}${events.path}`} className="img-popup" ><span className="icon-top-right-1"></span></a>
+                                    <a key={events.name}  data-fancybox="gallery" href={`${ROOT}${events.path}`} className="img-popup" ><span className="icon-top-right-1"></span></a>
                                   </Fancybox>
                                 </div>
                               </div>
