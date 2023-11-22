@@ -97,8 +97,9 @@ function Home(){
           setLoading(false);
         }
       };  
-      useDocumentTitle(`Home || Prettau Dental Lab`);
-
+      useEffect(() => {
+        document.title = `${t('home')} || Prettau Dental Lab`;
+      }, [t]);
 
     return(
         <div>

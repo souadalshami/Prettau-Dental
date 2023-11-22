@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 import { t } from "i18next";
 import { Trans } from 'react-i18next';
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
+import he from 'he';
 
 function Blogs({ languageId }){
     
@@ -22,7 +23,10 @@ function Blogs({ languageId }){
           const apiUrl = `${API_ROOT}/get_latest_blogs.php?languageId=${languageId}`;
           const response = await fetch(apiUrl);
           const jsonData = await response.json();
-          setBlog(jsonData);
+          const decodedBlogs = jsonData.map((blog) => ({...blog,
+            content: he.decode(blog.content),
+          }));
+          setBlog(decodedBlogs);
           setLoading(false);
         } catch (error) {
           console.error('Error fetching data:', error);
@@ -32,11 +36,6 @@ function Blogs({ languageId }){
       useEffect(() => {
             fetchBlog();
         }, [languageId, id]);
-
-
-
-
-
 
 
     return(
@@ -65,14 +64,14 @@ function Blogs({ languageId }){
                             <div className="news-one__single">
                                 <div className="news-one__img-box">
                                     <div className="news-one__img">
-                                        <img src={`${API_IMAGE_ROOT}${blog.path}`} alt=""/>
+                                        <img src={`${ROOT}${blog.path}`} alt=""/>
                                     </div>
                                 </div>
                                 <div className="news-one__content">
                                     <div className="news-one__content-top">
                                         <p className="news-one__sub-title">{blog.name}</p>
-                                        <h3 className="news-one__title"><Link reloadDocument to={`/Blogs/${blog.category_id}`}>{blog.title}</Link></h3>
-                                        <p className="news-one__text">{blog.content}</p>
+                                        <h3 className="news-one__title"><Link reloadDocument to={`/Blogs/${blog.category_id}/${blog.blog_id}`}>{blog.title}</Link></h3>
+                                        <p className="news-one__text" dangerouslySetInnerHTML={{ __html: blog.content.substring(0, 100) }}></p>
                                     </div>
                                 </div>
                             </div>

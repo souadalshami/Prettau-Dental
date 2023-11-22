@@ -2,7 +2,7 @@
 import Fancybox from "../Fancybox"; 
 import { useEffect, useState } from "react";
 import { API_ROOT } from '../../config';
-import { API_IMAGE_ROOT } from '../../config';
+import { ROOT } from '../../config';
 import { Trans } from 'react-i18next';
 import { t } from "i18next";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -75,7 +75,7 @@ function CertificationsSection({ languageId }){
                         <div className="team-two__right">
                         {
                             certifications.length === 0 ? (
-                            <div> <h2 className="text-center"> No Certifications Found </h2> </div>
+                            <div> <h2 className="text-center">{t('no-certifications')} </h2> </div>
                             ) : (
                             <Swiper modules={[Navigation, Scrollbar, A11y, Autoplay]} {...options}>
                                 {certifications.map((certifications) => {
@@ -84,10 +84,10 @@ function CertificationsSection({ languageId }){
                                             <div className="item">
                                                 <div className="team-two__single">                  
                                                     <Fancybox>
-                                                        <a  key={certifications.name} data-fancybox href={`${API_IMAGE_ROOT}/${certifications.path}`} className="img-popup" >
+                                                        <a  key={certifications.name} data-fancybox href={`${ROOT}/${certifications.path}`} className="img-popup" >
                                                             <div className="team-two__img-box">
                                                                 <div className="team-two__img">
-                                                                    <img src={`${API_IMAGE_ROOT}${certifications.path}`}alt=""/>
+                                                                    <img src={`${ROOT}${certifications.path}`}alt=""/>
                                                                 </div>
                                                             </div>
                                                         </a>

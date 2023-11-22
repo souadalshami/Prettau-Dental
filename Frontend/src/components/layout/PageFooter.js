@@ -110,7 +110,7 @@ function PageFooter({ languageId }){
                                 <ul className="footer-widget-two__company-list list-unstyled">
                                     {blog.slice(0,6).map((blog) => { 
                                         return (
-                                            <li key={blog.id}><Link reloadDocument to={`/Blogs/${blog.category_id}`}> {blog.title}</Link></li>
+                                            <li key={blog.id}><Link reloadDocument to={`/Blogs/${blog.category_id}/${blog.blog_id}`}> {blog.title}</Link></li>
                                         );
                                     })}
                                 </ul>

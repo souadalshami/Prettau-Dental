@@ -544,3 +544,43 @@ left: 0px !important;
 .ar .swiper-horizontal{
   direction: ltr;
 }
+.ar .services-one__read-more a span{
+  margin-right:5px
+}
+.contact-page__input-box input[type="text"], .contact-page__input-box input[type="email"],.contact-page__input-box input[type="number"]{
+  height: 38px;
+  width: 100%;
+  border: none;
+  padding-right: 30px;
+  outline: none;
+  font-size: 14px;
+  color: var(--bixola-gray);
+  display: block;
+  font-weight: 400;
+  background-color: transparent;
+  border-bottom: 1px solid #EAECF0;
+  transition: all 500ms ease;
+
+}
+.error-message{
+  color: red;
+}
+.loader {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
