@@ -74,7 +74,7 @@ function PageFooter({ languageId }){
                         <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div className="footer-widget-two__column footer-widget-two__about">
                                 <div className="footer-widget-two__logo">
-                                    <Link to="/"><img src={logo} alt=""   /></Link>
+                                    <Link to="/"><img src={logo} alt={t('alt-logo')}   /></Link>
                                 </div>
                                 <p className="footer-widget-two__about-text"><Trans i18nKey="footer-description"></Trans></p>
                                 <div className="site-footer-two__social">

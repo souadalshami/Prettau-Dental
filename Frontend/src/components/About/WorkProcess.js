@@ -11,7 +11,7 @@ function WorkProcess(){
             <h3 className="section__title-two">{t('about-process-title')}</h3>
             <div className="process-one__inner">
                 <div className="process-one__shape-1">
-                    <img src={process_one_shape_1 } alt=""/>
+                    <img src={process_one_shape_1 } alt={t('alt-shape-prettau')}/>
                 </div>
                 <div className="row">
                     <div className="col-xl-3 col-lg-6 col-md-6">

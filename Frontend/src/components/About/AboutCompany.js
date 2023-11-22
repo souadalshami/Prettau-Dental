@@ -20,10 +20,10 @@ function AboutCompany(){
     return(
         <section className="about-two">
             <div className="about-two__shape-2 zoominout">
-                <img src={about_two_shape_2} alt=""/>
+                <img src={about_two_shape_2} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="about-two__shape-3 float-bob-y">
-                <img src={about_two_shape_3} alt=""/>
+                <img src={about_two_shape_3} alt={t('alt-shape-prettau')}/>
             </div>
             <div className="container">
                 <div className="row">
@@ -66,7 +66,7 @@ function AboutCompany(){
                             <div className={`about-two__img  ${i18n.language == "1" ? "wow slideInRight" : "wow slideInLeft"}`} data-wow-delay="100ms"
                                 data-wow-duration="2500ms">
                                 <div className="about-two__shape-1 img-bounce">
-                                    <img src={about_two_shape_2}  alt=""/>
+                                    <img src={about_two_shape_2}  alt={t('alt-shape-prettau')}/>
                                 </div>
                                 <img src={about_two_img_1} alt="Prettau Dental Lab Building"/>
                                 <div className="about-two__video-link">
