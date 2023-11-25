@@ -47,7 +47,7 @@ function CertificationsSection({ languageId }){
             slidesPerView: 1,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           992: {
             slidesPerView: 3,
@@ -75,7 +75,7 @@ function CertificationsSection({ languageId }){
                             certifications.length === 0 ? (
                             <div> <h2 className="text-center">{t('no-certifications')} </h2> </div>
                             ) : (
-                            <Swiper modules={[Scrollbar, A11y, Autoplay]} {...options}>
+                            <Swiper modules={[Scrollbar, A11y, Autoplay]} {...options} dir="ltr">
                                 {certifications.map((certifications) => {
                                     return (
                                         <SwiperSlide key={certifications.id}>

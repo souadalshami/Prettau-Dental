@@ -91,7 +91,7 @@ function EventsSection({ languageId }){
                     <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
                       {events.map((events) => {
                         return(
-                          <SwiperSlide>
+                          <SwiperSlide key={events.id}>
                             <div className="portfolio-one__single">
                               <div className="portfolio-one__img-box">
                                 <div className="portfolio-one__img">

@@ -268,8 +268,12 @@ left: 0px !important;
   padding-right: 0px!important;
   padding-left: 30px!important;
 }
-@media only screen and (max-width: 767px) {
-    
+@media only screen and (max-width: 768px) {
+  .ar .team-two__right{
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0px !important;
+  }
 .ar .process-one__count {
   position: relative;
   top: 0;
@@ -584,5 +588,13 @@ left: 0px !important;
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .ar .team-two__right{
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0px !important;
   }
 }
