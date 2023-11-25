@@ -104,8 +104,8 @@ function ContactForm() {
                         <div className="col-xl-12">
                           <div className="contact-page__input-box text-message-box">
                             <h3 className="contact-page__input-title">{t('contact-form-message')}
-                              <span>{t('contact-form-oprional')}</span></h3>
-                            <textarea onChange={handleChange} placeholder="Type here..." id="message" name="message" value={formData.message}></textarea>
+                              <span>*</span></h3>
+                            <textarea onChange={handleChange} placeholder={t('contact-form-typehere')} id="message" name="message" value={formData.message}></textarea>
                             {errors.message && <h6 className="error-message">{errors.message}</h6>}
                           </div>
                         </div>

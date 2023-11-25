@@ -68,7 +68,7 @@ function AboutCompany(){
                                 <div className="about-two__shape-1 img-bounce">
                                     <img src={about_two_shape_2}  alt={t('alt-shape-prettau')}/>
                                 </div>
-                                <img src={about_two_img_1} alt="Prettau Dental Lab Building"/>
+                                <img src={about_two_img_1} alt={t('alt-prettau-building')}/>
                                 <div className="about-two__video-link">
                                 <Fancybox>
                                     <a data-fancybox href="https://www.youtube.com/watch?v=tiSiJ-8y6J8" className="video-popup">
@@ -92,7 +92,7 @@ function AboutCompany(){
                         </p>
                         <div className="services-details__img-and-feature">
                             <div className="services-details__feature-img">
-                                <img src={about_two_img_2} alt=""/>
+                                <img src={about_two_img_2} alt={t('alt-prettau-event')}/>
                                 <div className="services-details__video-link">
                                     
                                 
@@ -120,7 +120,7 @@ function AboutCompany(){
                                 </p>
                             </div>
                             <div className="services-details__feature-img">
-                                <img src={about_two_img_3} alt=""/>
+                                <img src={about_two_img_3} alt={t('alt-prettau-laboratory')} />
                                 <div className="services-details__video-link">
                                 </div>
                             </div>

@@ -71,7 +71,7 @@ function Brand({ languageId }){
                   <div className="brand-one__single">
                     <div  key={brand.path} className="brand-one__img">
                       <a href={brand.brand_path} target="_blank">
-                        <img src={`${ROOT}${brand.path}`} alt="Brand"/>
+                        <img src={`${ROOT}${brand.path}`} alt="Brand prettau deal with"/>
                       </a>
                     </div>
                   </div>

@@ -62,7 +62,6 @@
  "contact-form-number":"PHONE NUMBER",
  "person-name":"Jhon Smith",
  "contact-form-message":"Message",
- "contact-form-oprional":"(Oprional)",
  "contact-working-time":"Working Time",
  "contact-address":"Office Address",
  "contact-call-us":"Call Us",
@@ -105,7 +104,13 @@
  "alt-shape-prettau":"prettau shape",
  "no-certifications": "No Certifications Found",
  "no-video": "No videos found",
- "no-events": "No Events Found"
+ "no-events": "No Events Found",
+ "contact-form-typehere":"Type here...",
+ "alt-prettau-building":"Prettau Dental Building",
+ "alt-prettau-laboratory":"dental laboratory work in Prettau Dental",
+ "alt-prettau-event":"Events Prettau",
+ "no-categories":"No Categories found for this solution"
+ 
  
  
 
