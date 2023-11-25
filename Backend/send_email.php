@@ -24,7 +24,7 @@ if (empty($name) || empty($email) || empty($message) || empty($recaptcha) ) {
 $recipient = 'souadalshami1996@gmail.com';
 
 // Set the email subject
-$subject = 'New User on Contact Form';
+$subject = 'New User';
 
 // Set the email headers
 $headers = "From: $name <$email>" . "\r\n";
