@@ -44,7 +44,7 @@ function Testimonial(){
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>Ahmad</h3>
+                                    <h3>{t('about-testimonial-name-one')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description')}</p>
@@ -63,7 +63,7 @@ function Testimonial(){
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>Anna</h3>
+                                    <h3>{t('about-testimonial-name-two')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description2')}</p>
@@ -81,7 +81,7 @@ function Testimonial(){
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>John</h3>
+                                    <h3>{t('about-testimonial-name-three')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description3')}</p>

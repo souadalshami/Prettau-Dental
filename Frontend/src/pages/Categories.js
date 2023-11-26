@@ -116,7 +116,7 @@ function Categories(){
                                             <i className="fas fa-envelope"></i>
                                         </div>
                                         <div className="text">
-                                            <p><a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                                            <p><a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -224,7 +224,7 @@ function Categories(){
                 <div className="mobile-nav__content">
                     <span className="mobile-nav__close mobile-nav__toggler"  onClick={() => setNavbarOpen(false)}><i className="fa fa-times"></i></span>
                     <div className="logo-box">
-                        <a href="index.html" aria-label="logo image"><img src={gold_logo} alt={t('alt-logo')} /></a>
+                       <Link to="/" aria-label="logo image"><img src={gold_logo} alt={t('alt-logo')} /></Link>
                     </div>
                     <div className="mobile-nav__container">
                         <ul className="main-menu__list">
@@ -286,7 +286,7 @@ function Categories(){
                     <ul className="mobile-nav__contact list-unstyled">
                         <li>
                             <i className="fa fa-envelope"></i>
-                            <a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                            <a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                         </li>
                         <li>
                             <i className="fa fa-phone-alt"></i>

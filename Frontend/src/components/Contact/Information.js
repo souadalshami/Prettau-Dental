@@ -23,7 +23,7 @@ function Information(){
                                 <span className="icon-phone-call"></span>
                             </div>
                             <p className="information__text">{t('contact-call-us')}</p>
-                            <p className="information__number"><a dir="ltr"  href="tel:+12011234468">+964 (770) 037 2464</a></p>
+                            <p className="information__number"><a dir="ltr"  href="tel:tel:+9647700372464">+964 (770) 037 2464</a></p>
                         </div>
                     </div>
                     <div className="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">

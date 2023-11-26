@@ -75,7 +75,7 @@ function Categories({ languageId }){
 
           <div className="col-xl-8 col-lg-7">
             {loading ? (
-              <div>Loading...</div>
+              <div> </div>
             ) : categories.length === 0 ? (
               <div>
                 <h4 className="text-center">{t('no-categories')}</h4>

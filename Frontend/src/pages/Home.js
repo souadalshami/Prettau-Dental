@@ -122,7 +122,7 @@ function Home(){
                                             <i className="fas fa-envelope"></i>
                                         </div>
                                         <div className="text">
-                                            <p><a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                                            <p><a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -284,6 +284,7 @@ function Home(){
                                 </ul>
                             )}
                         </li> 
+                        
                     </ul>
                 </div>    
                     </ul>
@@ -292,7 +293,7 @@ function Home(){
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>
                         <i className="fa fa-envelope"></i>
-                        <a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                        <a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                     </li>
                     <li>
                         <i className="fa fa-phone-alt"></i>

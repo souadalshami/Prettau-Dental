@@ -48,8 +48,9 @@ function AboutCompany(){
                                     <div className="about-two__count count-box">
                                         <h3 className="count-text" data-stop="800" data-speed="3000">
                                             <CountUp
-                                                end={800}
-                                                duration={800}
+                                                end={80}
+                                                duration={32}
+                                                suffix="0"
                                                 enableScrollSpy
                                                 scrollSpyOnce
                                             />
