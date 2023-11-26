@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Prettau-Dental/static/css/main.233fc379.css",
-    "main.js": "/Prettau-Dental/static/js/main.33567aab.js",
+    "main.css": "/Prettau-Dental/static/css/main.4e067a8b.css",
+    "main.js": "/Prettau-Dental/static/js/main.c5f98ed6.js",
     "static/js/787.d4aba7ab.chunk.js": "/Prettau-Dental/static/js/787.d4aba7ab.chunk.js",
     "static/media/fa-solid-900.svg": "/Prettau-Dental/static/media/fa-solid-900.ca408b63c26d83dbd1e4.svg",
     "static/media/fa-brands-400.svg": "/Prettau-Dental/static/media/fa-brands-400.bc671f97630e1af81f65.svg",
@@ -62,12 +62,12 @@
     "static/media/news-one-shape-3.webp": "/Prettau-Dental/static/media/news-one-shape-3.63da3e28ed170cf14ec3.webp",
     "static/media/site-footer-two-shape-2.webp": "/Prettau-Dental/static/media/site-footer-two-shape-2.abe0a837adeced863295.webp",
     "static/media/cta-one-shape-2.webp": "/Prettau-Dental/static/media/cta-one-shape-2.64839412cb60ca894721.webp",
-    "main.233fc379.css.map": "/Prettau-Dental/static/css/main.233fc379.css.map",
-    "main.33567aab.js.map": "/Prettau-Dental/static/js/main.33567aab.js.map",
+    "main.4e067a8b.css.map": "/Prettau-Dental/static/css/main.4e067a8b.css.map",
+    "main.c5f98ed6.js.map": "/Prettau-Dental/static/js/main.c5f98ed6.js.map",
     "787.d4aba7ab.chunk.js.map": "/Prettau-Dental/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.233fc379.css",
-    "static/js/main.33567aab.js"
+    "static/css/main.4e067a8b.css",
+    "static/js/main.c5f98ed6.js"
   ]
 }
