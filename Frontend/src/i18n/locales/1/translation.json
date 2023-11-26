@@ -70,7 +70,7 @@
  "contact-form-email-example": "example@example.com",
  "about-testimonial-name":"Jacob Jones",
  "about-testimonial-name-description":"certificate of compliance",
- "about-testimonial-description":"The best experience ever. Truly came out with a smile. They proved to me that a dental clinic can be a lovable place All of the working people are professional and take care of the patient very carefully and nicely. I deeply appreciate them",
+ "about-testimonial-description":"They proved to me that a dental clinic can be a lovable place All of the working people are professional and take care of the patient very carefully and nicely. I deeply appreciate them",
  "about-testimonial-title":"People talking about us",
  "about-Process-one-title":"Identifying Problems",
  "about-Process-two-title":"Diagnosis of the Dental Ailment",
@@ -96,7 +96,7 @@
  "categories" :"Categories",
  "blogs":"Blogs",
 "about-testimonial-description2":"I am very happy with Pretau Dental Lab. They have a very nice office set up, competent and professional. I will gladly recommend them to anyone.",
-"about-testimonial-description3":"Very relaxed but professional environment; very confident in skills of staff and pleased with final the results",
+"about-testimonial-description3":"Very relaxed but professional environment; very confident in skills of staff and pleased with final the results and I advise everyone to deal with them It was a great experience.",
 "learn-more":"Learn More",
  "alt_about_two_img_2":"Corporate headquarters prettau",
  "alt-mainSlider-background":"Corporate headquarters prettau premium cover",
@@ -109,7 +109,12 @@
  "alt-prettau-building":"Prettau Dental Building",
  "alt-prettau-laboratory":"dental laboratory work in Prettau Dental",
  "alt-prettau-event":"Events Prettau",
- "no-categories":"No Categories found for this solution"
+ "no-categories":"No Categories found for this solution",
+ "about-testimonial-name-one":"ahmad",
+ "about-testimonial-name-two":"lama",
+ "about-testimonial-name-three":"adam",
+ "no-related-blogs":"no related blogs"
+ 
  
  
  
