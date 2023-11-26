@@ -98,7 +98,7 @@ function Footer({ languageId }){
                                 <ul className="footer-widget__company-list list-unstyled">
                                     {solution.map((solution) => { 
                                         return (
-                                            <li><Link reloadDocument to={`/solutions/${solution.id}`}> {solution.name}</Link></li>
+                                            <li  key={solution.id}><Link reloadDocument to={`/solutions/${solution.id}`}> {solution.name}</Link></li>
                                         );
                                     })}
                                 </ul>

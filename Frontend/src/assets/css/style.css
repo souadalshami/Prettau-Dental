@@ -32,9 +32,9 @@ img{
 .footer-widget__company-list li+li{
     margin-top: 0 !important;
 }
-.brand-one__img{
+/* .brand-one__img{
     filter: brightness(0) invert(1);
-}
+} */
 .brand-one__inner{
     padding: 40px 0 30px !important
 }
@@ -186,6 +186,7 @@ left: 0px !important;
 
 .ar .list-unstyled{
     padding-right: 0px;
+    align-items: start;
 }
 
 .ar .site-footer-two__social a {
@@ -208,7 +209,7 @@ left: 0px !important;
 
 .ar .footer-widget-two__contact-list li p {
  
-  margin-left: 00px !important;
+  margin-left: 0px !important;
   margin-right: 10px !important;
 }
 
@@ -245,12 +246,13 @@ left: 0px !important;
 .ar .icon-down-arrow{
   transform: rotate(90deg);
 }
+
  .ar .process-one__count {
   position: relative;
   top: 0;
-  left: 00% !important;
-  right: 25% !important;
-  transform: translateX(-50%);
+  left: 0% !important;
+  right: 50% !important;
+  transform: translateX(50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -263,29 +265,20 @@ left: 0px !important;
   transition: all 500ms ease;
 }
 
+
 .ar .contact-page__input-box input[type="text"],
 .ar .contact-page__input-box input[type="email"] {
   padding-right: 0px!important;
   padding-left: 30px!important;
 }
-@media only screen and (max-width: 767px) {
-    
-.ar .process-one__count {
-  position: relative;
-  top: 0;
- 
-  right: 35% !important;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-  border: 1px dashed #cccbd0;
-  background-color: #FAFAFA;
-  border-radius: 50%;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;}
+@media only screen and (max-width: 768px) {
+  .ar .team-two__right{
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0px !important;
+  }
+  
+
 
 
     }
@@ -317,7 +310,7 @@ left: 0px !important;
 
 .services-details__feature{
 
-  margin:30px!important;
+  /* margin:30px!important; */
 }
 .image-container {
     position: relative;
@@ -359,6 +352,8 @@ left: 0px !important;
     margin-top: 260px;
     text-transform: capitalize;
     color: white;
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
 
   }
 
@@ -582,5 +577,13 @@ left: 0px !important;
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .ar .team-two__right{
+    display: block;
+    margin-left: 0 !important;
+    margin-right: 0px !important;
   }
 }

@@ -122,7 +122,7 @@ function Home(){
                                             <i className="fas fa-envelope"></i>
                                         </div>
                                         <div className="text">
-                                            <p><a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                                            <p><a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -143,7 +143,7 @@ function Home(){
                                     <a href="https://www.instagram.com/prettau_premium?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i className="fab fa-instagram"></i></a>
                                     <a href="https://t.me/rrettau2011" target="_blank"><i className="fab fa-telegram"></i></a>
                                     <a href="https://www.tiktok.com/@prettnoujes?_t=8hDjhK201XZ&_r=1" target="_blank"><i className="fab fa-tiktok"></i></a>
-                                    <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber"></i></a>
+                                    <a href="https://invite.viber.com/?g2=AQAulJ%2F1N9jkKk1HcFF7rtsLE6gIMc8MTfwBW7brjwzM3YMx9UvGXWZTDVqWmkxh" target="_blank"><i className="fab fa-viber" alt="prettau viber"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@ function Home(){
             <div className="mobile-nav__content">
                 <span className="mobile-nav__close mobile-nav__toggler"  onClick={() => setNavbarOpen(false)}><i className="fa fa-times"></i></span>
                 <div className="logo-box">
-                    <Link to="/" aria-label="logo image"><img src={gold_logo} alt="" /></Link>
+                    <Link to="/" aria-label="logo image"><img src={gold_logo} alt={t('alt-logo')} /></Link>
                 </div>
                 <div className="mobile-nav__container">
                     <ul className="main-menu__list">
@@ -245,7 +245,7 @@ function Home(){
                                 <button aria-label="dropdown toggler" className={`${toggle ? 'expanded' : ''}`}  onClick={() => setToggle(!toggle)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {toggle && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     {solutions.map((solution) => { 
                                         return (
                                             <li key={solution.id}><Link reloadDocument to={`/solutions/${solution.id}`}> {solution.name}</Link></li>
@@ -273,7 +273,7 @@ function Home(){
                                 <button aria-label="dropdown toggler" className={`${togglelanguage ? 'expanded' : ''}`}  onClick={() => setToggleLanguage(!togglelanguage)}><i className="fa fa-angle-down"></i></button>
                             </a>
                             {togglelanguage && (
-                                <ul class={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
+                                <ul className={`sub-menu${navbarOpen ? ' d-block' : 'd-none'}`} >
                                     <li>
                                         <button className="mobile-language-btn" onClick={handleLanguageChange} value='1'>English</button>
                                     </li>
@@ -284,6 +284,7 @@ function Home(){
                                 </ul>
                             )}
                         </li> 
+                        
                     </ul>
                 </div>    
                     </ul>
@@ -292,7 +293,7 @@ function Home(){
                 <ul className="mobile-nav__contact list-unstyled">
                     <li>
                         <i className="fa fa-envelope"></i>
-                        <a href="mailto:help@company.com">Prettau.ptrettau@gmail.com</a>
+                        <a href="mailto:Prettau.ptrettau@gmail.com">Prettau.ptrettau@gmail.com</a>
                     </li>
                     <li>
                         <i className="fa fa-phone-alt"></i>

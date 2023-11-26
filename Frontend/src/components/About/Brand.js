@@ -63,14 +63,14 @@ function Brand({ languageId }){
       <section className="brand-one brand-three">
         <div className="container">
           <div className="brand-one__inner">
-            <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
+            <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options} dir="ltr">
               {brand.map((brand) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={brand.id} >
                     <div className="brand-one__single">
-                      <div  key={brand.path} className="brand-one__img">
-                        <a href={brand.path} target="_blank">
-                          <img src={`${ROOT}${brand.path}`} alt=""/>
+                      <div className="brand-one__img">
+                        <a href={brand.brand_path} target="_blank">
+                          <img src={`${ROOT}${brand.path}`} alt="Brand prettau deal with"/>
                         </a>
                       </div>
                     </div>

@@ -67,8 +67,8 @@ function Solutions({ languageId }){
                                 <div className="services-one__content">
                                     <h3 className="services-one__title"><Link reloadDocument to={`/solutions/${solution.id}`}>{solution.name}</Link></h3>
                                     <p className="services-one__text"> {solution.description}</p>
-                                    <div class="services-one__read-more">
-                                        <Link reloadDocument to={`/solutions/${solution.id}`} > Learn more <span class="icon-right-arrow1"></span> </Link>
+                                    <div className="services-one__read-more">
+                                        <Link reloadDocument to={`/solutions/${solution.id}`} >  {t('learn-more')}  <span className="icon-right-arrow1"></span> </Link>
                                     </div>
                                 </div>
                             </div>

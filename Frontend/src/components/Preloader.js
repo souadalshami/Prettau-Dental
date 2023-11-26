@@ -12,8 +12,8 @@ function Preloader() {
     left: "0",
     right:"0",
     margin: "auto",
-    "text-align":"center",
-    "background-color":"#000"
+    textAlign:"center",
+    backgroundColor:"#000",
 
   };
 

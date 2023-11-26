@@ -37,14 +37,14 @@ function Testimonial(){
             <div className="container">
                 <h3 className="section__title-two">{t('about-testimonial-title')}</h3>
                 <div className="testimonial-two__bottom">
-                    <OwlCarousel classNameName="testimonial-two__carousel owl-carousel owl-theme thm-owl__carousel " {...options}>
+                    <OwlCarousel className="testimonial-two__carousel owl-carousel owl-theme thm-owl__carousel " {...options}>
                         <div className="hight">
                             <div className="testimonial-two__single">
                                 <div className="testimonial-two__client-img">
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>Ahmad</h3>
+                                    <h3>{t('about-testimonial-name-one')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description')}</p>
@@ -63,7 +63,7 @@ function Testimonial(){
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>Anna</h3>
+                                    <h3>{t('about-testimonial-name-two')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description2')}</p>
@@ -81,7 +81,7 @@ function Testimonial(){
                                     {/* <img src={testimonial_1} alt=""/> */}
                                 </div>
                                 <div className="testimonial-two__client-info">
-                                    <h3>John</h3>
+                                    <h3>{t('about-testimonial-name-three')}</h3>
                                     {/* <p>{t('about-testimonial-name-description')}</p>/ */}
                                 </div>
                                 <p className="testimonial-two__text">{t('about-testimonial-description3')}</p>

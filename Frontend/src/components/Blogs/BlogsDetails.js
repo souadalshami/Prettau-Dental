@@ -74,15 +74,19 @@ function BlogDetails({languageId}){
                 <div className="col-xl-9 col-lg-8">
                     <div className="services-details__right">
                     {blogs.map((blogs) => {
+                        const hasSecondImage = blogs.image_after;
                         return (
-                            <>
+                            <div key={blogs.id}>
                                 <div className="services-details__img">
+                                {hasSecondImage ? (
                                     <div  style={ {width:"100%" }}>
                                         <ReactCompareSlider dir="ltr"
-                                            itemOne={<ReactCompareSliderImage src={`${ROOT}${blogs.path}`} srcSet={`${ROOT}${blogs.path}`} leftlaba alt="Image one" />} 
+                                            itemOne={<ReactCompareSliderImage src={`${ROOT}${blogs.path}`} srcSet={`${ROOT}${blogs.path}`}  alt="Image one" />} 
                                             itemTwo={<ReactCompareSliderImage src={`${ROOT}${blogs.path2}`} srcSet={`${ROOT}${blogs.path2}`} alt="Image two" />}
                                         />
-                                    </div> 
+                                    </div>  ) : (
+                                        <img src={`${ROOT}${blogs.path}`} alt="Image" />
+                                        )}
                                 </div>
                                 <div>
                                     <h3 className="services-details__title-1">
@@ -90,7 +94,7 @@ function BlogDetails({languageId}){
                                     </h3>
                                     <p className="services-details__text-1" dangerouslySetInnerHTML={{ __html: blogs.content }}></p>
                                 </div>
-                            </>
+                            </div>
                             );
                         })}
                     </div>

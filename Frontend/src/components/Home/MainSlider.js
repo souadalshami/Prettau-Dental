@@ -9,10 +9,10 @@ function MainSlider(){
 
     return(
         <section className="main-slider">
-            <div class="image-container">
+            <div className="image-container">
                 <img src={background} alt= {t('alt-mainSlider-background')}/>
-                <div class="overlay"></div>
-                <div class="text-container">
+                <div className="overlay"></div>
+                <div className="text-container">
                     <h2 className="main-title">{t('home-mainSlider-title-row-one')} <br/>{t('home-mainSlider-title-row-two')}</h2>
                     <p className="main-text">
                         <Trans i18nKey="home-mainSlider-description"></Trans>

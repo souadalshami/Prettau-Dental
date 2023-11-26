@@ -31,8 +31,8 @@ function Brand({ languageId }){
   };
 
   useEffect(() => {
-      fetchData();
-    }, []);
+    fetchData();
+  }, [languageId, id]);
     
 
   const options = {
@@ -64,14 +64,14 @@ function Brand({ languageId }){
     <section className="brand-one">
       <div className="container">
         <div className="brand-one__inner">
-          <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options}>
+          <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} {...options} dir="ltr">
             {brand.map((brand) => {
               return (
-                <SwiperSlide>
-                  <div key={brand.id} className="brand-one__single">
+                <SwiperSlide key={brand.id}>
+                  <div className="brand-one__single">
                     <div  key={brand.path} className="brand-one__img">
                       <a href={brand.brand_path} target="_blank">
-                        <img src={`${ROOT}${brand.path}`}alt=""/>
+                        <img src={`${ROOT}${brand.path}`} alt="Brand prettau deal with"/>
                       </a>
                     </div>
                   </div>

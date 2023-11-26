@@ -9,6 +9,7 @@ import { Trans } from 'react-i18next';
 import { API_ROOT } from '../../config';
 import { ROOT } from '../../config';
 import he from 'he';
+import WOW from 'wowjs';
 
 function Blogs({ languageId }){
     
@@ -16,7 +17,10 @@ function Blogs({ languageId }){
       const { id } = useParams();
       const [blog, setBlog] = useState([]);
       const [loading, setLoading] = useState(false);
-      
+
+
+      useEffect(() => {
+
       const fetchBlog = async () => {
         try {
           setLoading(true);
@@ -33,10 +37,14 @@ function Blogs({ languageId }){
           setLoading(false);
         }
       };
-      useEffect(() => {
-            fetchBlog();
-        }, [languageId, id]);
+      fetchBlog();
+    }, [languageId, id]);
 
+    useEffect(() => {
+        if (!loading) {
+          new WOW.WOW().init();
+        }
+      }, [loading]);
 
     return(
         <section className="news-one">
@@ -64,7 +72,7 @@ function Blogs({ languageId }){
                             <div className="news-one__single">
                                 <div className="news-one__img-box">
                                     <div className="news-one__img">
-                                        <img src={`${ROOT}${blog.path}`} alt=""/>
+                                        <img src={`${ROOT}${blog.path}`} alt={blog.name}/>
                                     </div>
                                 </div>
                                 <div className="news-one__content">
